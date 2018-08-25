@@ -22,6 +22,28 @@
   font-size: large;
 }
 
+.grid-container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 300px auto 300px;
+  grid-gap: 1px;
+  grid-template-areas: "sidebar-left header sidebar-right" "sidebar-left main sidebar-right" "sidebar-left footer sidebar-right";
+}
+
+.sidebar-left { grid-area: sidebar-left; }
+
+.sidebar-right { grid-area: sidebar-right; }
+
+.header { 
+  grid-area: header;
+  font-family: 'Playfair Display', serif;
+}
+
+.footer { grid-area: footer; }
+
+.main { grid-area: main; }
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
