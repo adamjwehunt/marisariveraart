@@ -4,8 +4,8 @@ import { BrowserRouter as Router, Link } from "react-router-dom";
 class Navigation extends Component {
   render() {
     return (
-        <Router className="navigation">
-            <div className="navigation">
+        <Router>
+            <div className="Navigation">
                 <Link to="/">Artwork</Link>
                 <Link to="/about">About</Link>
                 <Link to="/blog">Blog</Link>

@@ -1,50 +1,30 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-.grid-container {
   display: grid;
   height: 100%;
   grid-template-columns: auto auto auto;
   grid-template-rows: 300px auto 300px;
   grid-gap: 1px;
-  grid-template-areas: "sidebar-left header sidebar-right" "sidebar-left main sidebar-right" "sidebar-left footer sidebar-right";
+  grid-template-areas: "Sidebar-left Header Sidebar-right" "Sidebar-left Main Sidebar-right" "Sidebar-left Footer Sidebar-right";
 }
 
-.sidebar-left { grid-area: sidebar-left; }
+.Sidebar-left {
+  grid-area: Sidebar-left;
+}
 
-.sidebar-right { grid-area: sidebar-right; }
+.Sidebar-right {
+  grid-area: Sidebar-right;
+}
 
-.header { 
-  grid-area: header;
+.Header { 
+  grid-area: Header;
   font-family: 'Playfair Display', serif;
 }
 
-.footer { grid-area: footer; }
+.Footer {
+  grid-area: Footer;
+}
 
-.main { grid-area: main; }
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.Main {
+  grid-area: Main;
 }
