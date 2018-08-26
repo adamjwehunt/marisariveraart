@@ -1,18 +1,13 @@
 import React, { Component } from 'react';
-// import styled, { css } from 'react-emotion';
 
-// const Sample = () => <div css={{ background: 'brown' }} />
-
-
-// const Test = styled('button')`
-//   color: hotpink;
-// `
+const Sample = () => <div css={{ background: 'brown', height: '10px', width: '10px' }} />
 
 class Artwork extends Component {
   render() {
     return (
         <div className="Artwork">
           Artwork
+          <Sample></Sample>
         </div>
     );
   }
