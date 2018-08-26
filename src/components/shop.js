@@ -4,6 +4,7 @@ class Shop extends Component {
   render() {
     return (
         <div className="Shop">
+          shop
         </div>
     );
   }
