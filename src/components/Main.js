@@ -5,11 +5,15 @@ import About from './About';
 import Blog from './Blog';
 import Shop from './Shop';
 import Contact from './Contact';
+import { css } from 'emotion';
 
+const main = css`
+  grid-area: main;
+`
 class Main extends Component {
   render() {
     return (
-      <div className="Main">
+      <div className={css`${main}`}>
           <Route exact path="/" component={Artwork} />
           <Route path="/about" component={About} />
           <Route path="/blog" component={Blog} />

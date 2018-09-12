@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
+import { css } from 'emotion';
+
+const sidebarRight = css`
+  grid-area: sidebar-right;
+`
 
 class SidebarRight extends Component {
   render() {
     return (
-        <div className="Sidebar-right">
-        </div>
+      <div className={css`${sidebarRight}`}>
+      </div>
     );
   }
 }
