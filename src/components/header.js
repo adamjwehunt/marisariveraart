@@ -1,22 +1,33 @@
 import React, { Component } from 'react';
-import Navigation from './Navigation';
-import { css } from 'emotion';
+import logoImg from '../images/logo-mra.png';
 
-const header = css`
-  grid-area: header;
-
-  h1 {
-    font-family: 'Playfair Display', serif;
+const header = {
+  gridArea: 'header',
+  position: 'relative',
+  background: 'none',
+  '.logo': {
+    position: 'absolute',
+    top: '10px',
+    height: '50px',
+    img: {
+      height: '100%',
+      width: 'auto'
+    },
   }
-`
+};
 
 class Header extends Component {
   render() {
     return (
-        <div className={css`${header}`}>
-            {/* <img src={logo} className="App-logo" alt="logo" /> */}
-            <h1>Marisa Rivera Art</h1>
-            <Navigation></Navigation>
+        <div css={header}>
+          <div
+            className='logo'
+          >
+            <img
+              src={logoImg}
+              alt="Marisa River Art Logo"
+            />
+         </div>
         </div>
     );
   }

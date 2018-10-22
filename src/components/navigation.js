@@ -1,16 +1,27 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
+import NavLinks from './NavLinks';
+
+const nav = {
+  position: 'fixed',
+  padding: '70px 0',
+  top: '0',
+  right: '0',
+  bottom: '0',
+  zIndex: '1',
+  width: '240px',
+}
 
 class Navigation extends Component {
   render() {
     return (
-        <div className="Navigation">
-            <Link to="/">Artwork</Link>
-            <Link to="/about">About</Link>
-            <Link to="/blog">Blog</Link>
-            <Link to="/shop">Shop</Link>
-            <Link to="/contact">Contact</Link>
-        </div>
+      <div
+        css={nav}
+      >
+        <NavLinks
+          isNavOpen={this.props.isNavOpen}
+          toggleNav={this.props.toggleNav}
+        />
+      </div>
     );
   }
 }

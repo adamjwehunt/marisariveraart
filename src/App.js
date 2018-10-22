@@ -1,31 +1,32 @@
 import React, { Component } from 'react';
-import Header from './components/Header';
-import SidebarLeft from './components/SidebarLeft';
-import Main from './components/Main';
-import SidebarRight from './components/SidebarRight';
-import Footer from './components/Footer';
-import { css } from 'emotion';
+import MainGrid from './components/MainGrid';
+import Navigation from './components/Navigation';
+import NavToggle from './components/NavToggle';
 import './App.less';
 
-const app = css`
-  text-align: center;
-  display: grid;
-  height: 100%;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: 300px auto 300px;
-  grid-gap: 1px;
-  grid-template-areas: "sidebar-left header sidebar-right" "sidebar-left main sidebar-right" "sidebar-left footer sidebar-right";
-`
-
 class App extends Component {
+  state = {
+    navOpen: false,
+  };
+
+  toggleNav = () => {
+    this.setState(state => ({ isNavOpen: !state.isNavOpen }));
+  }
+
   render() {
     return (
-      <div className={css`${app}`}>
-        <Header></Header>
-        <SidebarLeft></SidebarLeft>
-        <Main></Main>
-        <SidebarRight></SidebarRight>
-        <Footer></Footer>
+      <div>
+        <MainGrid
+          isNavOpen={this.state.isNavOpen}
+        />
+        <Navigation
+          toggleNav={this.toggleNav}
+          isNavOpen={this.state.isNavOpen}
+        />
+        <NavToggle
+          toggleNav={this.toggleNav}
+          isNavOpen={this.state.isNavOpen}
+        />
       </div>
     );
   }
