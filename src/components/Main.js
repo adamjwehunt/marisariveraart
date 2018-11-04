@@ -8,24 +8,33 @@ import Shop from './Shop';
 import Contact from './Contact';
 
 const main = {
-  gridArea: 'main',
-  background: 'white',
-  pointerEvents: 'initial'
+	padding: '60px 10px',
+	zIndex: '1',
+	background: 'white',
+	transition: "all .2s 0s ease-in-out",
 }
 
 class Main extends Component {
-  render() {
-    return (
-      <div css={main}>
-          <Route exact path="/" component={Gallery} />
-          <Route path="/about" component={About} />
-          <Route path="/faq" component={Faq} />
-          <Route path="/blog" component={Blog} />
-          <Route path="/shop" component={Shop} />
-          <Route path="/contact" component={Contact} />
-      </div>
-    );
-  }
+	render() {
+		const { isNavOpen, toggleNav } = this.props;
+
+		return (
+			<main
+				onClick={isNavOpen ? toggleNav : null}
+				css={{
+				...main,
+					transform: `translate(${isNavOpen ? '-240px' : '0'},0)`,
+				}}
+			>
+					<Route exact path="/" component={Gallery} />
+					<Route path="/about" component={About} />
+					<Route path="/faq" component={Faq} />
+					<Route path="/blog" component={Blog} />
+					<Route path="/shop" component={Shop} />
+					<Route path="/contact" component={Contact} />
+			</main>
+		);
+	}
 }
 
 export default Main;
