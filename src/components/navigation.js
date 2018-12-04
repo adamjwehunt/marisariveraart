@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styles from '../styles'
 import NavLinks from './NavLinks';
 
 const nav = {
@@ -9,7 +10,7 @@ const nav = {
 	bottom: '0',
 	zIndex: '0',
 	width: '240px',
-	transition: 'transform .2s ease-in-out',
+	transition: styles.transform,
 }
 
 class Navigation extends Component {

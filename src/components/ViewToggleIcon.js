@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from '../styles'
 
 const viewToggleIcon = {
 	position: 'relative',
@@ -13,7 +14,7 @@ const viewToggleIcon = {
 		height: '4px',
 		background: '#666',
 		opacity: '1',
-		transition: 'transform .2s ease-in-out',
+		transition: styles.transform,
 		borderBottomLeftRadius: '9px',
 		borderTopLeftRadius: '9px',
 	}

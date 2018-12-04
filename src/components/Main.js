@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Route } from "react-router-dom";
+import styles from '../styles'
 import Gallery from './Gallery';
 import About from './About';
 import Faq from './Faq';
@@ -13,7 +14,7 @@ const main = {
 	padding: '64px 12px',
 	zIndex: '1',
 	background: 'white',
-	transition: 'transform .2s ease-in-out',
+	transition: styles.transform,
 }
 
 class Main extends Component {

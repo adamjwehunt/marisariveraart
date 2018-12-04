@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styles from '../styles'
 import ScrollHide from './ScrollHide';
 import ViewToggleIcon from './ViewToggleIcon';
 
@@ -9,7 +10,7 @@ const viewToggle = {
 	top: '5px',
 	padding: '0',
 	zIndex: '2',
-	transition: 'transform .2s ease-in-out',
+	transition: styles.transform,
 }
 
 class ViewToggle extends Component {
