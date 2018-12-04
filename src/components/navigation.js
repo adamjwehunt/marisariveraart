@@ -9,6 +9,7 @@ const nav = {
 	bottom: '0',
 	zIndex: '0',
 	width: '240px',
+	transition: 'transform .2s ease-in-out',
 }
 
 class Navigation extends Component {
@@ -16,7 +17,10 @@ class Navigation extends Component {
 		const { isNavOpen, toggleNav } = this.props;
 		return (
 			<nav
-				css={nav}
+				css={{
+					...nav,
+					transform: `translatex(${isNavOpen ? '0' : '100px'})`,
+				}}
 			>
 				<NavLinks
 					isNavOpen={isNavOpen}

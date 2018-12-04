@@ -1,4 +1,5 @@
 import React, { Fragment, Component } from 'react';
+import { Route } from "react-router-dom";
 import Header from './components/Header';
 import ViewToggle from './components/ViewToggle';
 import Navigation from './components/Navigation';
@@ -7,70 +8,46 @@ import './App.less';
 
 class App extends Component {
 	state = {
-		isFullscreen: false,
-		lastScrollTop: 0,
-		hasScrolled: false,
 		isNavOpen: false,
+		isZoomed: false
 	};
 
-	componentWillMount() {
-		window.addEventListener('scroll', this.handleScroll);
+	handleToggleZoom = (zoomState) => {
+		this.setState({isZoomed: zoomState})
 	}
 
-	componentWillUnmount() {
-		window.removeEventListener('scroll', this.handleScroll);
-	}
-
-	checkY = () => {
-		const pageY= window.scrollY;
-		const lastScrollTop = this.state.lastScrollTop;
-		const downTolerance = 8;
-
-		if (pageY > (lastScrollTop + downTolerance)) {
-			this.setState({ isFullscreen: true })
-		} else if (pageY < lastScrollTop || pageY <= 0) {
-			this.setState({ isFullscreen: false })
-		}
-
-		this.setState({
-			lastScrollTop: pageY,
-			hasScrolled: false,
-		});
-	};
-
-	handleScroll = () => {
-		if (!this.state.hasScrolled) {
-			window.requestAnimationFrame(this.checkY);
-		} else {
-			this.setState({ hasScrolled: true })
-			window.requestAnimationFrame(this.handleScroll);
-		}
-	};
-
-	toggleNav = () => {
-		this.setState({isNavOpen: !this.state.isNavOpen})
+	handleToggleNav = () => {
+		this.setState({ isNavOpen: !this.state.isNavOpen })
 	}
 
 	render() {
-		const { isFullscreen, isNavOpen} = this.state;
+		const {  isNavOpen, isZoomed } = this.state;
 
 		return (
 			<Fragment>
 				<Header
-					isVisible={!isFullscreen && !isNavOpen}
+					isZoomed={isZoomed}
 				/>
 				<ViewToggle
-					isVisible={!isFullscreen || isNavOpen}
+					togglenav={this.handleToggleNav}
+					togglezoom={this.handleToggleZoom}
 					isNavOpen={isNavOpen}
-					toggleNav={this.toggleNav}
+					isZoomed={isZoomed}
 				/>
 				<Navigation
-					toggleNav={this.toggleNav}
+					toggleNav={this.handleToggleNav}
 					isNavOpen={isNavOpen}
 				/>
-				<Main
-					toggleNav={this.toggleNav}
-					isNavOpen={isNavOpen}
+				<Route
+					render={props =>
+						<Main
+						{...props}
+						togglezoom={this.handleToggleZoom}
+						toggleNav={this.handleToggleNav}
+						isNavOpen={isNavOpen}
+						isZoomed={isZoomed}
+						/>
+					}
 				/>
 			</Fragment>
 		);

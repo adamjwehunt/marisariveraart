@@ -10,7 +10,6 @@ const linksWrapper = {
 	letterSpacing: '2.86px',
 	textTransform: 'lowercase',
 	lineHeight: '1.25em',
-	transition: 'all .2s 0s ease-in-out',
 
 	ul: {
 		textAlign: 'left',
@@ -28,7 +27,6 @@ const linksWrapper = {
 
 			a: {
 				display: 'inline-block',
-				transition: 'color .2s 0s ease-in-out',
 				padding: '15px 0',
 
 				img: {
@@ -43,13 +41,11 @@ const linksWrapper = {
 
 class NavLinks extends Component {
 	render() {
-		const { isNavOpen, toggleNav } = this.props;
+		const { toggleNav } = this.props;
+
 		return (
-			<nav
-				css={{
-					...linksWrapper,
-					opacity: `${isNavOpen ? '1' : '0'}`
-			}}>
+			<div
+				css={linksWrapper}>
 				<ul className="main">
 					<li><Link to="/" onClick={toggleNav}>Gallery</Link></li>
 					<li><Link to="/shop" onClick={toggleNav}>Shop</Link></li>
@@ -68,7 +64,7 @@ class NavLinks extends Component {
 						</a>
 					</li>
 				</ul>
-			</nav>
+			</div>
 		);
 	}
 }

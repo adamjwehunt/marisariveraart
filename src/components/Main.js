@@ -8,30 +8,41 @@ import Shop from './Shop';
 import Contact from './Contact';
 
 const main = {
-	padding: '60px 10px',
+	position: 'relative',
+	width: '100%',
+	padding: '64px 12px',
 	zIndex: '1',
 	background: 'white',
-	transition: "all .2s 0s ease-in-out",
+	transition: 'transform .2s ease-in-out',
 }
 
 class Main extends Component {
 	render() {
-		const { isNavOpen, toggleNav } = this.props;
+		const { isNavOpen, toggleNav, togglezoom, isZoomed } = this.props;
 
 		return (
 			<main
 				onClick={isNavOpen ? toggleNav : null}
 				css={{
 				...main,
-					transform: `translate(${isNavOpen ? '-240px' : '0'},0)`,
+					transform: isNavOpen ? 'translate(-240px,0)' : 'initial',
 				}}
 			>
-					<Route exact path="/" component={Gallery} />
-					<Route path="/about" component={About} />
-					<Route path="/faq" component={Faq} />
-					<Route path="/blog" component={Blog} />
-					<Route path="/shop" component={Shop} />
-					<Route path="/contact" component={Contact} />
+				<Route
+					exact
+					path="/"
+					render={() =>
+						<Gallery 
+							isNavOpen={isNavOpen}
+							togglezoom={togglezoom}
+							isZoomed={isZoomed}
+						/>}
+				/>
+				<Route path="/about" component={About} />
+				<Route path="/faq" component={Faq} />
+				<Route path="/blog" component={Blog} />
+				<Route path="/shop" component={Shop} />
+				<Route path="/contact" component={Contact} />
 			</main>
 		);
 	}
