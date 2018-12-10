@@ -55,21 +55,55 @@ const Image = posed.img({
 class ZoomImg extends Component {
 	state = {
 		isZoomed: false,
+		lastScrollTop: 0,
+		hasScrolled: false,
+		imageWidth: 'initial',
+		imageHeight: 'initial'
 	};
 
 	static getDerivedStateFromProps = props => !props.isZoomed ? { isZoomed: false } : null;
 
 	zoomIn = rect => {
-		window.addEventListener('scroll', this.zoomOut);
-		this.setState({ imageWidth: rect.width, imageHeight: rect.height });
-		this.setState({ isZoomed: true });
+		window.addEventListener('scroll', this.handleScroll);
+		this.setState({
+			lastScrollTop: window.scrollY,
+			imageWidth: rect.width,
+			imageHeight: rect.height,
+			isZoomed: true
+		});
 		this.props.togglezoom(true);
 	}
 
 	zoomOut = () => {
-		window.removeEventListener('scroll', this.zoomOut);
+		window.removeEventListener('scroll', this.handleScroll);
 		this.setState({ isZoomed: false });
 		this.props.togglezoom(false);
+	};
+
+	checkY = () => {
+		const { lastScrollTop } = this.state;
+		const pageY = window.scrollY;
+		const tolerance = 5;
+
+		if (pageY > (lastScrollTop + tolerance)) {
+			this.zoomOut()
+		} else if (pageY + tolerance < lastScrollTop || pageY <= 0) {
+			this.zoomOut()
+		}
+
+		this.setState({
+			lastScrollTop: pageY,
+			hasScrolled: false,
+		});
+	};
+
+	handleScroll = () => {
+		if (!this.state.hasScrolled) {
+			window.requestAnimationFrame(this.checkY);
+		} else {
+			this.setState({ hasScrolled: true })
+			window.requestAnimationFrame(this.handleScroll);
+		}
 	};
 
 	toggleZoom = rect => this.state.isZoomed ? this.zoomOut() : this.zoomIn(rect);

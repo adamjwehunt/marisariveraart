@@ -16,13 +16,13 @@ class ScrollHide extends Component {
 	}
 
 	checkY = () => {
-		const pageY= window.scrollY;
+		const pageY = window.scrollY;
 		const lastScrollTop = this.state.lastScrollTop;
-		const downTolerance = 8;
+		const tolerance = 5;
 
-		if (pageY > (lastScrollTop + downTolerance)) {
+		if (pageY > (lastScrollTop + tolerance)) {
 			this.setState({ isVisible: false })
-		} else if (pageY < lastScrollTop || pageY <= 0) {
+		} else if (pageY + tolerance < lastScrollTop || pageY <= 0) {
 			this.setState({ isVisible: true })
 		}
 
