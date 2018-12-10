@@ -6,8 +6,8 @@ import ViewToggleIcon from './ViewToggleIcon';
 const viewToggle = {
 	position: 'fixed',
 	height: '42px',
-	right: '10px',
-	top: '5px',
+	right: '16px',
+	top: '10px',
 	padding: '0',
 	zIndex: '2',
 	transition: styles.transform,

@@ -1,6 +1,10 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import Collection from './Collection'
 import CollectionPicker from './CollectionPicker'
+ 
+const gallerWrapper = {
+	//add animate
+};
 
 class Gallery extends Component {
 	state = {
@@ -16,7 +20,7 @@ class Gallery extends Component {
 		const { activeCollectionId } = this.state
 
 		return (
-			<Fragment>
+			<div css={gallerWrapper}>
 				<CollectionPicker
 					collectionChange={this.handleCollectionChange}
 				/>
@@ -26,7 +30,7 @@ class Gallery extends Component {
 					isNavOpen={isNavOpen}
 					isZoomed={isZoomed} 
 				/>
-			</Fragment>
+			</div>
 		);
 	}
 }

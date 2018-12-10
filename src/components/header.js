@@ -7,14 +7,15 @@ const header = {
 	display: 'flex',
 	zIndex: '2',
 	justifyContent: 'space-between',
-	background: 'white',
-	height: '50px',
+	background: 'rgba(255, 255, 255, .86)',
+	backdropFiler: 'blur(3px)',
+	height: '58px',
 	width: '100%',
 	transition:
 		'transform .2s ease-in-out, opacity 350ms cubic-bezier(0.08, 0.69, 0.2, 0.99)',
 
 	'.logo': {
-		padding: '8px',
+		padding: '11px 0 0 16px',
 		height: '50px',
 
 		img: {

@@ -10,8 +10,8 @@ import Contact from './Contact';
 
 const main = {
 	position: 'relative',
+	padding: '64px 10px',
 	width: '100%',
-	padding: '64px 12px',
 	zIndex: '1',
 	background: 'white',
 	transition: styles.transform,

@@ -31,14 +31,17 @@ const transition = {
 
 const Image = posed.img({
 	init: {
+		objectFit: 'cover',
 		position: 'static',
-		width: 'auto',
-		height: 'auto',
+    width: '100%',
+		height: '100%',
 		transition,
 		flip: true,
 	},
 	zoom: {
 		position: 'fixed',
+		width: 'auto',
+		height: 'auto',
 		top: 0,
 		left: 0,
 		right: 0,
@@ -52,18 +55,13 @@ const Image = posed.img({
 class ZoomImg extends Component {
 	state = {
 		isZoomed: false,
-		rect: undefined
 	};
 
-	static getDerivedStateFromProps(props) {
-		if (!props.isZoomed) {
-			return { isZoomed: false }
-		}
-		return null;
-	}
+	static getDerivedStateFromProps = props => !props.isZoomed ? { isZoomed: false } : null;
 
-	zoomIn = () => {
+	zoomIn = rect => {
 		window.addEventListener('scroll', this.zoomOut);
+		this.setState({ imageWidth: rect.width, imageHeight: rect.height });
 		this.setState({ isZoomed: true });
 		this.props.togglezoom(true);
 	}
@@ -74,42 +72,39 @@ class ZoomImg extends Component {
 		this.props.togglezoom(false);
 	};
 
-	toggleZoom = () => {
-		const { rect } = this.state;
-		this.setState({ imageWidth: rect.width, imageHeight: rect.height });
-		this.state.isZoomed ? this.zoomOut() : this.zoomIn();
-	};
-
-	setDimensions = rect => {
-		this.setState({ rect });
-	}
+	toggleZoom = rect => this.state.isZoomed ? this.zoomOut() : this.zoomIn(rect);
 
 	render() {
 		const { isZoomed, imageWidth, imageHeight } = this.state;
 		const { isNavOpen, src } = this.props;
 		const pose = isZoomed ? 'zoom' : 'init';
 
-
 		return (
-			<Rect onChange={this.setDimensions}>
+			<Rect>
 				{({ rect, ref }) => (
-			<div
-				style={{ width: imageWidth, height: imageHeight }}
-				ref={ref}
-			>
-				<Frame
-					pose={pose}
-					css={frame}
-				/>
-				<Image
-					pose={pose}
-					src={src}
-					css={{
-						maxHeight: isZoomed ? '70%' : 'initial',
-					}}
-					onClick={!isNavOpen ? this.toggleZoom : null}
-				/>
-			</div>
+					<div
+						ref={ref}
+						style={{
+							width: isZoomed ? imageWidth : '100%',
+							height:  isZoomed ? imageHeight : '100%',
+							maxWidth: isZoomed ? 'initial' : '750px',
+							maxHeight:  isZoomed ? 'initial' : '938px',
+						}}
+					>
+						<Frame
+							pose={pose}
+							css={frame}
+						/>
+						<Image
+							onClick={() => !isNavOpen ? this.toggleZoom(rect) : null}
+							pose={pose}
+							src={src}
+							css={{
+								maxHeight: isZoomed ? '70%' : 'initial',
+								cursor: isZoomed ? 'zoom-out' : 'zoom-in',
+							}}
+						/>
+					</div>
 				)}
 			</Rect>
 		);

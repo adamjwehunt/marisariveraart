@@ -4,6 +4,7 @@ import Header from './components/Header';
 import ViewToggle from './components/ViewToggle';
 import Navigation from './components/Navigation';
 import Main from './components/Main';
+import DirectionToggles from './components/DirectionToggles';
 import './App.less';
 
 class App extends Component {
@@ -48,6 +49,10 @@ class App extends Component {
 						isZoomed={isZoomed}
 						/>
 					}
+				/>
+				<DirectionToggles
+					isZoomed={isZoomed}
+					isNavOpen={isNavOpen}
 				/>
 			</Fragment>
 		);

@@ -6,7 +6,6 @@ const collectionGrid = {
 	display: 'grid',
 	gridGap: '12px',
 	gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))'
-	// gridTemplateRows: 'repeat(auto-fit, minmax(400px, 1fr))'
 };
 
 class Collection extends Component {
