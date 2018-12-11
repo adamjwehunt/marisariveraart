@@ -83,7 +83,7 @@ class ZoomImg extends Component {
 	checkY = () => {
 		const { lastScrollTop } = this.state;
 		const pageY = window.scrollY;
-		const tolerance = 5;
+		const tolerance = 4;
 
 		if (pageY > (lastScrollTop + tolerance)) {
 			this.zoomOut()

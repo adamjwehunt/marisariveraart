@@ -3,14 +3,21 @@ import styles from '../styles'
 import ScrollHide from './ScrollHide';
 import ViewToggleIcon from './ViewToggleIcon';
 
-const viewToggle = {
+const viewToggleWrapper = {
 	position: 'fixed',
+	display: 'flex',
+	justifyContent: 'flex-end',
 	height: '42px',
-	right: '16px',
+	width: '100%',
+	maxWidth: styles.appMaxWidth,
+	paddingRight: '16px',
 	top: '10px',
-	padding: '0',
 	zIndex: '2',
 	transition: styles.transform,
+
+	'button': {
+		padding: '0'
+	}
 }
 
 class ViewToggle extends Component {
@@ -40,19 +47,18 @@ class ViewToggle extends Component {
 
 		return (
 			<ScrollHide render={isVisible => (
-				<button
-					onClick={this.handleClick}
-					css={{
-						...viewToggle,
-						transform: !isNavOpen && !isZoomed ?
-							`translateY(${isVisible ? '0' : 'calc(-' + viewToggle.height + ' - ' + viewToggle.top}))` :
-							null
-					}}
-					>
-					<ViewToggleIcon
-						isMenuIcon={!isNavOpen && !isZoomed}
-					/>
-				</button>
+				<div css={{
+					...viewToggleWrapper,
+					transform: !isNavOpen && !isZoomed ?
+					`translateY(${isVisible ? '0' : 'calc(-' + viewToggleWrapper.height + ' - ' + viewToggleWrapper.top}))` :
+					null
+					}}>
+					<button onClick={this.handleClick}>
+						<ViewToggleIcon
+							isMenuIcon={!isNavOpen && !isZoomed}
+						/>
+					</button>
+				</div>
 			)}/>
 		);
 	}

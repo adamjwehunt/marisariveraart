@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styles from '../styles';
 import ScrollHide from './ScrollHide';
 import logoImg from '../images/logo-mra.png';
 
@@ -11,6 +12,7 @@ const header = {
 	backdropFiler: 'blur(3px)',
 	height: '58px',
 	width: '100%',
+	maxWidth: styles.appMaxWidth,
 	transition:
 		'transform .2s ease-in-out, opacity 350ms cubic-bezier(0.08, 0.69, 0.2, 0.99)',
 

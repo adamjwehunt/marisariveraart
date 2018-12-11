@@ -1,11 +1,19 @@
-import React, { Fragment, Component } from 'react';
+import React, { Component } from 'react';
 import { Route } from "react-router-dom";
+import styles from './styles'
 import Header from './components/Header';
 import ViewToggle from './components/ViewToggle';
 import Navigation from './components/Navigation';
 import Main from './components/Main';
 import DirectionToggles from './components/DirectionToggles';
 import './App.less';
+
+const app = {
+	width: '100%',
+	maxWidth: styles.appMaxWidth,
+	margin: '0 auto',
+	overflow: 'hidden',
+}
 
 class App extends Component {
 	state = {
@@ -25,7 +33,7 @@ class App extends Component {
 		const {  isNavOpen, isZoomed } = this.state;
 
 		return (
-			<Fragment>
+			<div css={app}>
 				<Header
 					isZoomed={isZoomed}
 				/>
@@ -54,7 +62,7 @@ class App extends Component {
 					isZoomed={isZoomed}
 					isNavOpen={isNavOpen}
 				/>
-			</Fragment>
+			</div>
 		);
 	}
 }

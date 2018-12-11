@@ -6,11 +6,19 @@ import DirectionToggleRight from './DirectionToggleRight';
 
 const directionToggles = {
 	position: 'fixed',
+	display: 'flex',
+	width: '100%',
+	maxWidth: styles.appMaxWidth,
+	padding: '0 11px',
 	height: '52px',
 	bottom: '12px',
-	padding: '0',
 	zIndex: '2',
 	transition: styles.transform,
+
+	'button': {
+		padding: '0',
+		width: 'auto'
+	}
 }
 
 class DirectionToggles extends Component {
@@ -32,36 +40,40 @@ class DirectionToggles extends Component {
 		const { isNavOpen, isZoomed } = this.props;
 
 		return (
-			<ScrollHide render={isVisible => (
+			<ScrollHide startShow={200} render={isVisible => (
 				<Fragment>
-					<button
-						onClick={this.handleClick}
-						css={{
-							...directionToggles,
-							left: '11px',
-							transform: !isZoomed ?
-								`translateY(${isZoomed && isVisible ? '0' : 'calc(' + directionToggles.height + ' + ' + directionToggles.bottom}))` :
-								null
-						}}
-					>
-						<DirectionToggleLeft/>
-					</button>
-					<button
-						onClick={this.handleClick}
-						css={{
-							...directionToggles,
-							background: 'rgba(255, 255, 255, .86)',
-							borderRadius: '50%',
-							right: '11px',
-							transform: !isZoomed ?
-								`translateY(${isVisible && !isNavOpen ? '0' : 'calc(' + directionToggles.height + ' + ' + directionToggles.bottom}))` :
-								null
-						}}
-					>
-						<DirectionToggleRight
-							isUpArrow={!isZoomed}
-						/>
-					</button>
+					<div css={{
+						...directionToggles,
+						justifyContent: 'flex-start',
+						transform: !isZoomed ?
+							`translateY(${isZoomed && isVisible ? '0' : 'calc(' + directionToggles.height + ' + ' + directionToggles.bottom}))` :
+							null
+					}}>
+						<button
+							onClick={this.handleClick}
+						>
+							<DirectionToggleLeft/>
+						</button>
+					</div>
+					<div css={{
+						...directionToggles,
+						justifyContent: 'flex-end',
+						transform: !isZoomed ?
+							`translateY(${isVisible && !isNavOpen ? '0' : 'calc(' + directionToggles.height + ' + ' + directionToggles.bottom}))` :
+							null
+					}}>
+						<button
+							onClick={this.handleClick}
+							css={{
+								background: 'rgba(255, 255, 255, .86)',
+								borderRadius: '50%'
+							}}
+						>
+							<DirectionToggleRight
+								isUpArrow={!isZoomed}
+							/>
+						</button>
+					</div>
 				</Fragment>
 			)}/>
 		);
