@@ -46,7 +46,7 @@ class ViewToggle extends Component {
 		const { isNavOpen, isZoomed } = this.props;
 
 		return (
-			<ScrollHide render={isVisible => (
+			<ScrollHide stopHideY={20} render={isVisible => (
 				<div css={{
 					...viewToggleWrapper,
 					transform: !isNavOpen && !isZoomed ?

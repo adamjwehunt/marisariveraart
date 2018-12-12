@@ -10,6 +10,7 @@ const linksWrapper = {
 	letterSpacing: '2.86px',
 	textTransform: 'lowercase',
 	lineHeight: '1.25em',
+	transition: 'opacity .2s 0s ease-in-out',
 
 	ul: {
 		textAlign: 'left',
@@ -41,11 +42,13 @@ const linksWrapper = {
 
 class NavLinks extends Component {
 	render() {
-		const { toggleNav } = this.props;
+		const { toggleNav, isNavOpen } = this.props;
 
 		return (
-			<div
-				css={linksWrapper}>
+			<div css={{
+					...linksWrapper,
+					opacity: `${isNavOpen ? '1' : '0'}`
+			}}>
 				<ul className="main">
 					<li><Link to="/" onClick={toggleNav}>Gallery</Link></li>
 					<li><Link to="/shop" onClick={toggleNav}>Shop</Link></li>

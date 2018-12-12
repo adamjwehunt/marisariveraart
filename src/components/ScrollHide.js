@@ -10,8 +10,8 @@ class ScrollHide extends Component {
 	componentWillMount() {
 		window.addEventListener('scroll', this.handleScroll);
 
-		const { startShow } = this.props
-		if (startShow && startShow > window.scrollY) {
+		const { startShowY } = this.props
+		if (startShowY && startShowY > window.scrollY) {
 			this.setState({ isVisible: false })
 		}
 	}
@@ -23,17 +23,18 @@ class ScrollHide extends Component {
 	checkY = () => {
 		const pageY = window.scrollY;
 		const lastScrollTop = this.state.lastScrollTop;
-		const startShow = this.props.startShow || 0;
+		const startShowY = this.props.startShowY || 0;
+		const stopHideY = this.props.stopHideY || 0;
 		const tolerance = 4;
 
-		if (pageY > (lastScrollTop + tolerance)) {
-			this.setState({ isVisible: false })
-		} else if (startShow <= pageY && (pageY < lastScrollTop || pageY <= 0)) {
-			this.setState({ isVisible: true })
-		}
-
-		if (startShow > pageY) {
-			this.setState({ isVisible: false })
+		if ((pageY > 0 && pageY > (lastScrollTop + tolerance) && stopHideY < pageY) || (startShowY > pageY && pageY > 0)) {
+			this.setState({
+				isVisible: false
+			})
+		} else if (startShowY <= pageY && (pageY < lastScrollTop || pageY <= 0)) {
+			this.setState({
+				isVisible: true
+			})
 		}
 
 		this.setState({

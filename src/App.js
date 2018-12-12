@@ -9,10 +9,8 @@ import DirectionToggles from './components/DirectionToggles';
 import './App.less';
 
 const app = {
-	width: '100%',
 	maxWidth: styles.appMaxWidth,
 	margin: '0 auto',
-	overflow: 'hidden',
 }
 
 class App extends Component {

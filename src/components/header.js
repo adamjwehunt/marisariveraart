@@ -32,7 +32,7 @@ class Header extends Component {
 		const { isZoomed } = this.props;
 
 		return (
-				<ScrollHide render={isVisible => (
+				<ScrollHide stopHideY={20} render={isVisible => (
 					<header css={{
 							...header,
 							transform: `translateY(${isVisible ? '0' : '-' + header.height})`,

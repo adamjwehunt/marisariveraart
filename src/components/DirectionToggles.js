@@ -40,7 +40,7 @@ class DirectionToggles extends Component {
 		const { isNavOpen, isZoomed } = this.props;
 
 		return (
-			<ScrollHide startShow={200} render={isVisible => (
+			<ScrollHide startShowY={200} render={isVisible => (
 				<Fragment>
 					<div css={{
 						...directionToggles,
