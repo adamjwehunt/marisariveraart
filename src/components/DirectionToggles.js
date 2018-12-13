@@ -24,6 +24,9 @@ const directionToggles = {
 class DirectionToggles extends Component {
 	state = {
 		imageNav: false,
+		scrollInterval: 0,
+		startScroll: 0,
+		touched: false
 	};
 
 	static getDerivedStateFromProps(props) {
@@ -32,9 +35,45 @@ class DirectionToggles extends Component {
 		}
 		return { imageNav: false };
 	}
+	
 
-	handleClick = () => {
+	handleClickLeft = () => {
+		if (!this.props.isZoomed) {
+		} 
 	}
+
+	handleClickRight = () => {
+		if (!this.props.isZoomed) {
+			this.scrollToTop()
+		} 
+	}
+
+	scrollStep = () => {
+		if (window.scrollY <= 0 || this.state.touched) {
+				window.removeEventListener('touchstart', this.handleTouch);
+				window.removeEventListener('wheel', this.handleTouch);
+
+				this.setState({ touched: false })
+				clearInterval(this.state.scrollInterval);
+				return;
+		}
+
+		const scrollPercent = window.scrollY / this.state.startScroll * 100;
+		window.scroll(0, window.scrollY - (scrollPercent * 2.5) - 20);
+	}
+	
+	scrollToTop = () => {
+		window.addEventListener('touchstart', this.handleTouch);
+		window.addEventListener('wheel', this.handleTouch);
+		
+		let scrollInterval = setInterval(this.scrollStep, 16.66);
+		this.setState({
+			scrollInterval: scrollInterval,
+			startScroll: window.scrollY
+		 });
+	}
+
+	handleTouch = () => this.setState({ touched: true})
 
 	render() {
 		const { isNavOpen, isZoomed } = this.props;
@@ -50,7 +89,7 @@ class DirectionToggles extends Component {
 							null
 					}}>
 						<button
-							onClick={this.handleClick}
+							onClick={this.handleClickLeft}
 						>
 							<DirectionToggleLeft/>
 						</button>
@@ -63,7 +102,7 @@ class DirectionToggles extends Component {
 							null
 					}}>
 						<button
-							onClick={this.handleClick}
+							onClick={this.handleClickRight}
 							css={{
 								background: 'rgba(255, 255, 255, .86)',
 								borderRadius: '50%'

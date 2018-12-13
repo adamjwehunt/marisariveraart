@@ -27,7 +27,10 @@ class ScrollHide extends Component {
 		const stopHideY = this.props.stopHideY || 0;
 		const tolerance = 4;
 
-		if ((pageY > 0 && pageY > (lastScrollTop + tolerance) && stopHideY < pageY) || (startShowY > pageY && pageY > 0)) {
+		if (
+			(pageY > 0 && pageY > (lastScrollTop + tolerance) && stopHideY < pageY) ||
+			(startShowY > pageY && pageY >= 0)
+		) {
 			this.setState({
 				isVisible: false
 			})

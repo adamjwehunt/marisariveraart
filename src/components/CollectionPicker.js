@@ -32,13 +32,17 @@ class CollectionPicker extends Component {
 		selectedCollectionId: content.collection[1]
 	}
 
-	handleClick = collectionId => event => {
-		this.setState({ selectedCollectionId: collectionId });
+	handleClick = collectionId => () => {
+		this.setState({
+			selectedCollectionId: collectionId
+		});
+
 		this.props.collectionChange(collectionId);
 	}
 
 	render() {
 		const collection = content.collection;
+
 		return (
 			<nav css={collectionPicker}>
 					{

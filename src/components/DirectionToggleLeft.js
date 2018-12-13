@@ -25,13 +25,13 @@ const DirectionToggleRight = () => {
 		<div css={directionToggleRight}>
 			<span
 				css={{
-          transform: 'rotate(-45deg) translateY(7px) translateX(5px)',
+					transform: 'rotate(-45deg) translateY(7px) translateX(5px)',
 					top: offset
 				}}
 			/>
 			<span
 				css={{
-          transform: 'rotate(45deg) translateY(-8px) translateX(4px)',
+					transform: 'rotate(45deg) translateY(-8px) translateX(4px)',
 					bottom: offset
 				}}
 			/>
