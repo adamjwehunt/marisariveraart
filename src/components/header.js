@@ -36,7 +36,7 @@ class Header extends Component {
 					<header css={{
 							...header,
 							transform: `translateY(${isVisible ? '0' : '-' + header.height})`,
-							opacity: isZoomed ? '0' : '100%'
+							opacity: isZoomed ? '0' : '1'
 						}}
 					>
 						<div

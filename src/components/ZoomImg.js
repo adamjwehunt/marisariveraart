@@ -65,18 +65,22 @@ class ZoomImg extends Component {
 
 	zoomIn = rect => {
 		window.addEventListener('scroll', this.handleScroll);
+
 		this.setState({
 			lastScrollTop: window.scrollY,
 			imageWidth: rect.width,
 			imageHeight: rect.height,
 			isZoomed: true
 		});
+
 		this.props.togglezoom(true);
 	}
 
 	zoomOut = () => {
 		window.removeEventListener('scroll', this.handleScroll);
+
 		this.setState({ isZoomed: false });
+
 		this.props.togglezoom(false);
 	};
 

@@ -26,7 +26,8 @@ class DirectionToggles extends Component {
 		imageNav: false,
 		scrollInterval: 0,
 		startScroll: 0,
-		touched: false
+		// touched: false,
+		// hasScrolled: false
 	};
 
 	static getDerivedStateFromProps(props) {
@@ -48,6 +49,15 @@ class DirectionToggles extends Component {
 		} 
 	}
 
+	// handleTouch = () => {
+	// 	if (!this.state.hasScrolled) {
+	// 		window.requestAnimationFrame(this.scrollStep);
+	// 	} else {
+	// 		this.setState({ hasScrolled: true })
+	// 		window.requestAnimationFrame(this.handleScroll);
+	// 	}
+	// };
+
 	scrollStep = () => {
 		if (window.scrollY <= 0 || this.state.touched) {
 				window.removeEventListener('touchstart', this.handleTouch);
@@ -59,7 +69,11 @@ class DirectionToggles extends Component {
 		}
 
 		const scrollPercent = window.scrollY / this.state.startScroll * 100;
-		window.scroll(0, window.scrollY - (scrollPercent * 2.5) - 20);
+		return window.scroll(0, window.scrollY - scrollPercent - 50);
+
+		// this.setState({
+		// 	hasScrolled: false,
+		// });
 	}
 	
 	scrollToTop = () => {
@@ -84,6 +98,8 @@ class DirectionToggles extends Component {
 					<div css={{
 						...directionToggles,
 						justifyContent: 'flex-start',
+						opacity: isZoomed ? '1' : '0',
+						transition: `transform .2s ease-in-out${!isZoomed ? ', opacity .35s cubic-bezier(0.08, 0.69, 0.2, 0.99) .35s' : ''}`,
 						transform: !isZoomed ?
 							`translateY(${isZoomed && isVisible ? '0' : 'calc(' + directionToggles.height + ' + ' + directionToggles.bottom}))` :
 							null
@@ -97,6 +113,8 @@ class DirectionToggles extends Component {
 					<div css={{
 						...directionToggles,
 						justifyContent: 'flex-end',
+						opacity: isZoomed || isVisible ? '1' : '0',
+						transition: `transform .2s ease-in-out${!(isZoomed || isVisible) ? ', opacity .35s cubic-bezier(0.08, 0.69, 0.2, 0.99) .35s' : ''}`,
 						transform: !isZoomed ?
 							`translateY(${isVisible && !isNavOpen ? '0' : 'calc(' + directionToggles.height + ' + ' + directionToggles.bottom}))` :
 							null

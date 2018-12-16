@@ -13,8 +13,9 @@ const directionToggleRight = {
     width: '30px',
 		height: '6px',
 		background: '#666',
-		opacity: '1',
 		transition: styles.transform,
+		borderBottomRightRadius: '10px',
+		borderTopRightRadius: '10px',
 	}
 }
 
@@ -26,7 +27,7 @@ const DirectionToggleRight = () => {
 			<span
 				css={{
 					transform: 'rotate(-45deg) translateY(7px) translateX(5px)',
-					top: offset
+					top: offset,
 				}}
 			/>
 			<span

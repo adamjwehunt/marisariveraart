@@ -13,9 +13,7 @@ const directionToggleRight = {
     width: '30px',
 		height: '6px',
 		background: '#666',
-		opacity: '1',
 		transition: styles.transform,
-
 	}
 }
 
@@ -27,13 +25,19 @@ const DirectionToggleRight = ({ isUpArrow }) => {
 			<span
 				css={{
 					transform: isUpArrow ? 'rotate(-45deg) translateY(8px) translateX(-5px)' : 'rotate(45deg) translateY(-8px) translateX(10px)',
-					top: offset
+					top: offset,
+					borderBottomLeftRadius: '10px',
+					borderTopLeftRadius: '10px',
 				}}
 			/>
 			<span
 				css={{
 					transform: isUpArrow ? 'rotate(45deg) translateY(-23px) translateX(5px)' : 'rotate(-45deg) translateY(7px) translateX(11px)',
-					bottom: offset
+					bottom: offset,
+					borderBottomRightRadius: '10px',
+					borderTopRightRadius: '10px',
+					borderBottomLeftRadius: '10px',
+					borderTopLeftRadius: '10px',
 				}}
 			/>
 		</div>

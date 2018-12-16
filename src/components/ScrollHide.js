@@ -47,7 +47,7 @@ class ScrollHide extends Component {
 	};
 
 	handleScroll = () => {
-		if (!this.state.hasScrolled) {
+		if (this.state.hasScrolled) {
 			window.requestAnimationFrame(this.checkY);
 		} else {
 			this.setState({ hasScrolled: true })

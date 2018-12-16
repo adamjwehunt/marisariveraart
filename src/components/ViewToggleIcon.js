@@ -13,7 +13,6 @@ const viewToggleIcon = {
 		width: '100%',
 		height: '5px',
 		background: '#666',
-		opacity: '1',
 		transition: styles.transform,
 		borderBottomLeftRadius: '10px',
 		borderTopLeftRadius: '10px',
