@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Route } from "react-router-dom";
 import styles from './styles'
-import Header from './components/Header';
-import ViewToggle from './components/ViewToggle';
-import Navigation from './components/Navigation';
+// import Header from './components/Header';
+// import ViewToggle from './components/ViewToggle';
+// import Navigation from './components/Navigation';
 import Main from './components/Main';
-import DirectionToggles from './components/DirectionToggles';
+// import DirectionToggles from './components/DirectionToggles';
 import './App.less';
 
 const app = {
@@ -32,10 +32,10 @@ class App extends Component {
 
 		return (
 			<div css={app}>
-				<Header
+				{/* <Header
 					isZoomed={isZoomed}
-				/>
-				<ViewToggle
+				/> */}
+				{/* <ViewToggle
 					togglenav={this.handleToggleNav}
 					togglezoom={this.handleToggleZoom}
 					isNavOpen={isNavOpen}
@@ -44,7 +44,7 @@ class App extends Component {
 				<Navigation
 					toggleNav={this.handleToggleNav}
 					isNavOpen={isNavOpen}
-				/>
+				/> */}
 				<Route
 					render={props =>
 						<Main
@@ -56,10 +56,10 @@ class App extends Component {
 						/>
 					}
 				/>
-				<DirectionToggles
+				{/* <DirectionToggles
 					isZoomed={isZoomed}
 					isNavOpen={isNavOpen}
-				/>
+				/> */}
 			</div>
 		);
 	}

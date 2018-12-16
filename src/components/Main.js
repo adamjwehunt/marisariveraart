@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { Route } from "react-router-dom";
 import styles from '../styles'
-import Gallery from './Gallery';
-import About from './About';
-import Faq from './Faq';
-import Blog from './Blog';
-import Shop from './Shop';
-import Contact from './Contact';
+import Splash from './Splash';
+// import Gallery from './Gallery';
+// import About from './About';
+// import Faq from './Faq';
+// import Blog from './Blog';
+// import Shop from './Shop';
+// import Contact from './Contact';
 
 const main = {
 	position: 'relative',
@@ -19,7 +20,12 @@ const main = {
 
 class Main extends Component {
 	render() {
-		const { isNavOpen, toggleNav, togglezoom, isZoomed } = this.props;
+		const {
+			isNavOpen,
+			toggleNav,
+			// togglezoom,
+			// isZoomed
+			} = this.props;
 
 		return (
 			<main
@@ -29,7 +35,8 @@ class Main extends Component {
 					transform: isNavOpen ? 'translate(-240px,0)' : 'initial',
 				}}
 			>
-				<Route
+				<Route path="/" component={Splash} />
+				{/* <Route
 					exact
 					path="/"
 					render={() =>
@@ -43,7 +50,7 @@ class Main extends Component {
 				<Route path="/faq" component={Faq} />
 				<Route path="/blog" component={Blog} />
 				<Route path="/shop" component={Shop} />
-				<Route path="/contact" component={Contact} />
+				<Route path="/contact" component={Contact} /> */}
 			</main>
 		);
 	}
