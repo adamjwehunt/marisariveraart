@@ -1,5 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import content from '../services/content';
+import posed from 'react-pose';
+
 
 const collectionPicker = {
 	display: 'grid',
@@ -18,57 +20,62 @@ const collectionTitleWrapper = {
 	right: '0',
 	justifyContent: 'center',
 	alignItems: 'center',
-	color: 'white'
+	color: 'white',
+	cursor: 'pointer'
 }
 
 const collectionImage = {
 	objectFit: 'cover',
 	height: '140px',
-	width: '140px'
+	width: 'fit-content',
 };
 
-class CollectionPicker extends Component {
-	state = {
-		selectedCollectionId: content.collection[1]
+const Box = posed.div({
+	hoverable: true,
+	pressable: true,
+	init: {
+		scale: 1,
+		boxShadow: '0px 0px 0px rgba(0,0,0,0)'
+	},
+	hover: {
+		scale: 1.018,
+		boxShadow: '0px 2px 4px rgba(0,0,0,0.2)'
+	},
+	press: {
+		scale: 1.01,
+		boxShadow: '0px 1px 2px rgba(0,0,0,0.1)'
 	}
+});
+const CollectionPicker = ({
+	collectionChange
+}) => {
+	const collection = content.collection;
 
-	handleClick = collectionId => () => {
-		this.setState({
-			selectedCollectionId: collectionId
-		});
-
-		this.props.collectionChange(collectionId);
-	}
-
-	render() {
-		const collection = content.collection;
-
-		return (
-			<nav css={collectionPicker}>
-					{
-						Object.keys(collection).map(key =>
-							<div
-								key={key}
+	return (
+		<nav css={collectionPicker}>
+				{
+					Object.keys(collection).map(key =>
+						<div
+							key={key}
+						>
+							<Box
+								css={{position: 'relative'}}
+								onClick={() => collectionChange(key)}
 							>
-								<div
-									css={{position: 'relative'}}
-									onClick={this.handleClick(key)}
-								>
-									<img
-										src={collection[key].image.thumbnailSrc}
-										alt={collection[key].image.thumbnailSrc}
-										css={collectionImage}
-									/>
-									<div css={collectionTitleWrapper}>
-										{collection[key].title}
-									</div>
+								<img
+									src={collection[key].image.thumbnailSrc}
+									alt={collection[key].image.thumbnailSrc}
+									css={collectionImage}
+								/>
+								<div css={collectionTitleWrapper}>
+									{collection[key].title}
 								</div>
-							</div>
-						)
-					}
-			</nav>
-		);
-	}
+							</Box>
+						</div>
+					)
+				}
+		</nav>
+	);
 }
 
 export default CollectionPicker;

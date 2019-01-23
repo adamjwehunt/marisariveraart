@@ -19,7 +19,9 @@ const viewToggleIcon = {
 	}
 }
 
-const ViewToggleIcon = ({ isMenuIcon }) => {
+const ViewToggleIcon = ({
+	isMenuIcon
+}) => {
 	const translate = isMenuIcon ? '0px' : '6px';
 	const rotate = (deg) => isMenuIcon ? 'rotate(0deg)' : `rotate(${deg}deg)`;
 	const offset = '10px';

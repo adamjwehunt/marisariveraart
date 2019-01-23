@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styles from '../styles';
 import ScrollHide from './ScrollHide';
 import logoImg from '../images/logo-mra.png';
@@ -27,30 +27,24 @@ const header = {
 	}
 };
 
-class Header extends Component {
-	render() {
-		const { isZoomed } = this.props;
-
-		return (
-				<ScrollHide stopHideY={20} render={isVisible => (
-					<header css={{
-							...header,
-							transform: `translateY(${isVisible ? '0' : '-' + header.height})`,
-							opacity: isZoomed ? '0' : '1'
-						}}
-					>
-						<div
-							className='logo'
-						>
-							<img
-								src={logoImg}
-								alt="Marisa River Art Logo"
-							/>
-						</div>
-				</header>
-				)}/>
-		);
-	}
-}
+const Header = ({zoomedImgId}) => (
+	<ScrollHide stopHideY={20} render={isVisible => (
+		<header css={{
+				...header,
+				transform: `translateY(${isVisible ? '0' : '-' + header.height})`,
+				opacity: zoomedImgId ? '0' : '1'
+			}}
+		>
+			<div
+				className='logo'
+			>
+				<img
+					src={logoImg}
+					alt="Marisa River Art Logo"
+				/>
+			</div>
+		</header>
+	)}/>
+);
 
 export default Header;

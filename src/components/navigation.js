@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styles from '../styles'
 import NavLinks from './NavLinks';
 
@@ -22,25 +22,23 @@ const nav = {
 	transition: styles.transform,
 }
 
-class Navigation extends Component {
-	render() {
-		const { isNavOpen, toggleNav } = this.props;
-		return (
-			<div css={navWrapper}>
-				<nav
-					css={{
-						...nav,
-						transform: `translatex(${isNavOpen ? '0' : '100px'})`,
-					}}
-				>
-					<NavLinks
-						isNavOpen={isNavOpen}
-						toggleNav={toggleNav}
-					/>
-				</nav>
-			</div>
-		);
-	}
-}
+const Navigation = ({
+	isNavOpen,
+	onToggleNav
+}) => (
+	<div css={navWrapper}>
+		<nav
+			css={{
+				...nav,
+				transform: `translatex(${isNavOpen ? '0' : '100px'})`,
+			}}
+		>
+			<NavLinks
+				isNavOpen={isNavOpen}
+				onToggleNav={onToggleNav}
+			/>
+		</nav>
+	</div>
+);
 
 export default Navigation;

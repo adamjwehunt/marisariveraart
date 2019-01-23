@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import content from '../services/content';
 import styles from '../styles'
 import ScrollHide from './ScrollHide';
 import DirectionToggleLeft from './DirectionToggleLeft';
@@ -26,25 +27,45 @@ class DirectionToggles extends Component {
 		imageNav: false,
 		scrollInterval: 0,
 		startScroll: 0,
+		nextImgId: undefined,
+		prevImgId: undefined
 		// touched: false,
 		// hasScrolled: false
 	};
 
 	static getDerivedStateFromProps(props) {
-		if (props.isZoomed) {
-			return { imageNav: true }
+		const zoomedImgId = props.zoomedImgId;
+		const artList = content.artList;
+
+		if (zoomedImgId) {
+			const collectionId = artList.find(art => art.id === zoomedImgId).collectionId;
+			const collection = artList.filter(art => art.collectionId === collectionId);
+			const imgIndex = collection.findIndex(art => art.id === zoomedImgId);
+			const nextImg = collection[imgIndex + 1]
+			const prevImg = collection[imgIndex - 1];
+			const nextImgId = nextImg && nextImg.id;
+			const prevImgId = prevImg && prevImg.id;
+
+			return { imageNav: true, nextImgId, prevImgId }
 		}
 		return { imageNav: false };
 	}
 	
 
 	handleClickLeft = () => {
-		if (!this.props.isZoomed) {
+		const { prevImgId } = this.props
+
+		if (prevImgId) {
+			this.props.onToggleZoom(prevImgId);
 		} 
 	}
 
 	handleClickRight = () => {
-		if (!this.props.isZoomed) {
+		const { nextImgId } = this.state
+
+		if (nextImgId) {
+			this.props.onToggleZoom(nextImgId);
+		} else {
 			this.scrollToTop()
 		} 
 	}
@@ -90,7 +111,7 @@ class DirectionToggles extends Component {
 	handleTouch = () => this.setState({ touched: true})
 
 	render() {
-		const { isNavOpen, isZoomed } = this.props;
+		const { isNavOpen, zoomedImgId } = this.props;
 
 		return (
 			<ScrollHide startShowY={200} render={isVisible => (
@@ -98,10 +119,10 @@ class DirectionToggles extends Component {
 					<div css={{
 						...directionToggles,
 						justifyContent: 'flex-start',
-						opacity: isZoomed ? '1' : '0',
-						transition: `transform .2s ease-in-out${!isZoomed ? ', opacity .35s cubic-bezier(0.08, 0.69, 0.2, 0.99) .35s' : ''}`,
-						transform: !isZoomed ?
-							`translateY(${isZoomed && isVisible ? '0' : 'calc(' + directionToggles.height + ' + ' + directionToggles.bottom}))` :
+						opacity: zoomedImgId ? '1' : '0',
+						transition: `transform .2s ease-in-out${!zoomedImgId ? ', opacity .35s cubic-bezier(0.08, 0.69, 0.2, 0.99) .35s' : ''}`,
+						transform: !zoomedImgId ?
+							`translateY(${zoomedImgId && isVisible ? '0' : 'calc(' + directionToggles.height + ' + ' + directionToggles.bottom}))` :
 							null
 					}}>
 						<button
@@ -113,9 +134,9 @@ class DirectionToggles extends Component {
 					<div css={{
 						...directionToggles,
 						justifyContent: 'flex-end',
-						opacity: isZoomed || isVisible ? '1' : '0',
-						transition: `transform .2s ease-in-out${!(isZoomed || isVisible) ? ', opacity .35s cubic-bezier(0.08, 0.69, 0.2, 0.99) .35s' : ''}`,
-						transform: !isZoomed ?
+						opacity: zoomedImgId || isVisible ? '1' : '0',
+						transition: `transform .2s ease-in-out${!(zoomedImgId || isVisible) ? ', opacity .35s cubic-bezier(0.08, 0.69, 0.2, 0.99) .35s' : ''}`,
+						transform: !zoomedImgId ?
 							`translateY(${isVisible && !isNavOpen ? '0' : 'calc(' + directionToggles.height + ' + ' + directionToggles.bottom}))` :
 							null
 					}}>
@@ -127,7 +148,7 @@ class DirectionToggles extends Component {
 							}}
 						>
 							<DirectionToggleRight
-								isUpArrow={!isZoomed}
+								isUpArrow={!zoomedImgId}
 							/>
 						</button>
 					</div>

@@ -1,23 +1,30 @@
-import React, { Component } from 'react';
+import React, {
+	PureComponent
+} from 'react';
 import Collection from './Collection'
 import CollectionPicker from './CollectionPicker'
- 
+
 const gallerWrapper = {
 	//add animate
 };
 
-class Gallery extends Component {
+class Gallery extends PureComponent {
 	state = {
 		activeCollectionId: '1',
 	}
 
 	handleCollectionChange = id => {
-		this.setState({activeCollectionId: id})
+		this.setState({
+			activeCollectionId: id
+		})
 	}
 
 	render() {
-		const { togglezoom, isNavOpen, isZoomed } = this.props;
-		const { activeCollectionId } = this.state
+		const {
+			onToggleZoom,
+			isNavOpen,
+			zoomedImgId
+		} = this.props;
 
 		return (
 			<div css={gallerWrapper}>
@@ -25,10 +32,10 @@ class Gallery extends Component {
 					collectionChange={this.handleCollectionChange}
 				/>
 				<Collection
-					activeCollectionId={activeCollectionId}
-					togglezoom={togglezoom} 
+					activeCollectionId={this.state.activeCollectionId}
+					onToggleZoom={onToggleZoom}
 					isNavOpen={isNavOpen}
-					isZoomed={isZoomed} 
+					zoomedImgId={zoomedImgId}
 				/>
 			</div>
 		);

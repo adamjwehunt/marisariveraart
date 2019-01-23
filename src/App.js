@@ -1,9 +1,13 @@
-import React, { Component } from 'react';
-import { Route } from "react-router-dom";
+import React, {
+	PureComponent
+} from 'react';
+import {
+	Route
+} from "react-router-dom";
 import styles from './styles'
-// import Header from './components/Header';
-// import ViewToggle from './components/ViewToggle';
-// import Navigation from './components/Navigation';
+import Header from './components/header';
+import ViewToggle from './components/ViewToggle';
+import Navigation from './components/navigation';
 import Main from './components/Main';
 // import DirectionToggles from './components/DirectionToggles';
 import './App.less';
@@ -13,51 +17,54 @@ const app = {
 	margin: '0 auto',
 }
 
-class App extends Component {
+class App extends PureComponent {
 	state = {
 		isNavOpen: false,
-		isZoomed: false
+		zoomedImgId: undefined
 	};
 
-	handleToggleZoom = (zoomState) => {
-		this.setState({isZoomed: zoomState})
-	}
+	handleToggleZoom = imgId => this.setState({
+		zoomedImgId: imgId
+	})
 
-	handleToggleNav = () => {
-		this.setState({ isNavOpen: !this.state.isNavOpen })
-	}
+	handleToggleNav = () => this.setState({
+		isNavOpen: !this.state.isNavOpen
+	})
 
 	render() {
-		const {  isNavOpen, isZoomed } = this.state;
+		const {
+			isNavOpen,
+			zoomedImgId
+		} = this.state;
 
 		return (
 			<div css={app}>
-				{/* <Header
-					isZoomed={isZoomed}
-				/> */}
-				{/* <ViewToggle
-					togglenav={this.handleToggleNav}
-					togglezoom={this.handleToggleZoom}
+				<Header
+					zoomedImgId={zoomedImgId}
+				/>
+				<ViewToggle
+					onToggleNav={this.handleToggleNav}
+					onToggleZoom={this.handleToggleZoom}
 					isNavOpen={isNavOpen}
-					isZoomed={isZoomed}
+					zoomedImgId={zoomedImgId}
 				/>
 				<Navigation
-					toggleNav={this.handleToggleNav}
+					onToggleNav={this.handleToggleNav}
 					isNavOpen={isNavOpen}
-				/> */}
+				/>
 				<Route
-					render={props =>
+					render={() =>
 						<Main
-						{...props}
-						togglezoom={this.handleToggleZoom}
-						toggleNav={this.handleToggleNav}
-						isNavOpen={isNavOpen}
-						isZoomed={isZoomed}
+							onToggleZoom={this.handleToggleZoom}
+							onToggleNav={this.handleToggleNav}
+							isNavOpen={isNavOpen}
+							zoomedImgId={zoomedImgId}
 						/>
 					}
 				/>
 				{/* <DirectionToggles
-					isZoomed={isZoomed}
+					onToggleZoom={this.handleToggleZoom}
+					zoomedImgId={zoomedImgId}
 					isNavOpen={isNavOpen}
 				/> */}
 			</div>

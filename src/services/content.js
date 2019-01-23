@@ -1,7 +1,7 @@
 import testImg from '../images/7.jpg'
-import testImg5 from '../images/5.JPG'
-import testImg4 from '../images/4.JPG'
-import testImg1 from '../images/1.JPG'
+import testImg5 from '../images/5.jpg'
+import testImg4 from '../images/4.jpg'
+import testImg1 from '../images/1.jpg'
 
 export default {
 	// about: {

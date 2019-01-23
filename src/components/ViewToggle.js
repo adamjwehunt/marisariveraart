@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styles from '../styles'
 import ScrollHide from './ScrollHide';
 import ViewToggleIcon from './ViewToggleIcon';
@@ -20,48 +20,36 @@ const viewToggleWrapper = {
 	}
 }
 
-class ViewToggle extends Component {
-	state = {
-		navToggle: true,
-	};
-
-	static getDerivedStateFromProps(props) {
-		if (props.isZoomed) {
-			return { navToggle: false }
-		}
-		return { navToggle: true };
-	}
-
-	handleClick = () => {
-		const { togglenav, togglezoom } = this.props;
-
-		if (this.state.navToggle) {
-			togglenav()
+const ViewToggle = ({
+	isNavOpen,
+	zoomedImgId,
+	onToggleNav,
+	onToggleZoom
+}) => {
+	const handleClick = () => {
+		if (zoomedImgId) {
+			onToggleZoom(false)
 		} else {
-			togglezoom(false)
+			onToggleNav()
 		}
 	}
 
-	render() {
-		const { isNavOpen, isZoomed } = this.props;
-
-		return (
-			<ScrollHide stopHideY={20} render={isVisible => (
-				<div css={{
-					...viewToggleWrapper,
-					transform: !isNavOpen && !isZoomed ?
-					`translateY(${isVisible ? '0' : 'calc(-' + viewToggleWrapper.height + ' - ' + viewToggleWrapper.top}))` :
-					null
-					}}>
-					<button onClick={this.handleClick}>
-						<ViewToggleIcon
-							isMenuIcon={!isNavOpen && !isZoomed}
-						/>
-					</button>
-				</div>
-			)}/>
-		);
-	}
-}
+	return (
+		<ScrollHide stopHideY={20} render={isVisible => (
+			<div css={{
+				...viewToggleWrapper,
+				transform: !isNavOpen && !zoomedImgId ?
+					`translateY(${isVisible ? '0' : 'calc(-' + viewToggleWrapper.height + ' - ' + viewToggleWrapper.top}))`
+					: null
+				}}>
+				<button onClick={handleClick}>
+					<ViewToggleIcon
+						isMenuIcon={!isNavOpen && !zoomedImgId}
+					/>
+				</button>
+			</div>
+		)}/>
+	)
+};
 
 export default ViewToggle;
