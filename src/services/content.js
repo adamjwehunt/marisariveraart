@@ -1,7 +1,7 @@
 import testImg from '../images/7.jpg'
-import testImg5 from '../images/5.jpg'
-import testImg4 from '../images/4.jpg'
-import testImg1 from '../images/1.jpg'
+import testImg1 from '../images/5.jpg'
+import testImg2 from '../images/4.jpg'
+import testImg3 from '../images/1.jpg'
 
 export default {
 	// about: {
@@ -71,14 +71,14 @@ export default {
 			title: 'Delicate Dusk',
 			description: 'Stuff that makes me anna love allover.',
 			image: {
-				thumbnailSrc: testImg1,
+				thumbnailSrc: testImg3,
 			},
 		},
 		2: {
 			title: 'Autumn Hour',
 			description: 'This is where i put my crazy stuff',
 			image: {
-				thumbnailSrc: testImg4,
+				thumbnailSrc: testImg2,
 			},
 		},
 		3: {
@@ -92,7 +92,7 @@ export default {
 			title: 'Desert lavender',
 			description: 'Just get the hint already bucko',
 			image: {
-				thumbnailSrc: testImg4,
+				thumbnailSrc: testImg2,
 			},
 		}
 	},
@@ -110,17 +110,25 @@ export default {
 				print: {
 					full: {
 						id: '',
-						src: testImg1,
+						src: testImg3,
 					},
 					thumbnail: {
 						id: '',
-						src: testImg1,
+						src: testImg3,
 					}
 				},
 				photo: [
 					{
 						id: '',
-						src: '',
+						src: testImg2,
+					},
+					{
+						id: '',
+						src: testImg1,
+					},
+					{
+						id: '',
+						src: testImg,
 					}
 				]
 			},
@@ -153,17 +161,25 @@ export default {
 				print: {
 					full: {
 						id: '',
-						src: testImg4,
+						src: testImg2,
 					},
 					thumbnail: {
 						id: '',
-						src: testImg4,
+						src: testImg2,
 					}
 				},
 				photo: [
 					{
 						id: '',
-						src: '',
+						src: testImg3,
+					},
+					{
+						id: '',
+						src: testImg1,
+					},
+					{
+						id: '',
+						src: testImg,
 					}
 				]
 			},
@@ -196,17 +212,25 @@ export default {
 				print: {
 					full: {
 						id: '',
-						src: testImg5,
+						src: testImg1,
 					},
 					thumbnail: {
 						id: '',
-						src: testImg5,
+						src: testImg1,
 					}
 				},
 				photo: [
 					{
 						id: '',
-						src: '',
+						src: testImg3,
+					},
+					{
+						id: '',
+						src: testImg2,
+					},
+					{
+						id: '',
+						src: testImg,
 					}
 				]
 			},
@@ -239,17 +263,25 @@ export default {
 				print: {
 					full: {
 						id: '',
-						src: testImg4,
+						src: testImg2,
 					},
 					thumbnail: {
 						id: '',
-						src: testImg4,
+						src: testImg2,
 					}
 				},
 				photo: [
 					{
 						id: '',
-						src: '',
+						src: testImg3,
+					},
+					{
+						id: '',
+						src: testImg1,
+					},
+					{
+						id: '',
+						src: testImg,
 					}
 				]
 			},
@@ -292,7 +324,15 @@ export default {
 				photo: [
 					{
 						id: '',
-						src: '',
+						src: testImg2,
+					},
+					{
+						id: '',
+						src: testImg1,
+					},
+					{
+						id: '',
+						src: testImg3,
 					}
 				]
 			},
@@ -325,17 +365,25 @@ export default {
 				print: {
 					full: {
 						id: '',
-						src: testImg5,
+						src: testImg1,
 					},
 					thumbnail: {
 						id: '',
-						src: testImg5,
+						src: testImg1,
 					}
 				},
 				photo: [
 					{
 						id: '',
-						src: '',
+						src: testImg3,
+					},
+					{
+						id: '',
+						src: testImg2,
+					},
+					{
+						id: '',
+						src: testImg,
 					}
 				]
 			},
@@ -378,7 +426,15 @@ export default {
 				photo: [
 					{
 						id: '',
-						src: '',
+						src: testImg2,
+					},
+					{
+						id: '',
+						src: testImg1,
+					},
+					{
+						id: '',
+						src: testImg3,
 					}
 				]
 			},
@@ -411,17 +467,25 @@ export default {
 				print: {
 					full: {
 						id: '',
-						src: testImg1,
+						src: testImg3,
 					},
 					thumbnail: {
 						id: '',
-						src: testImg1,
+						src: testImg3,
 					}
 				},
 				photo: [
 					{
 						id: '',
-						src: '',
+						src: testImg2,
+					},
+					{
+						id: '',
+						src: testImg1,
+					},
+					{
+						id: '',
+						src: testImg,
 					}
 				]
 			},
@@ -454,17 +518,25 @@ export default {
 				print: {
 					full: {
 						id: '',
-						src: testImg4,
+						src: testImg2,
 					},
 					thumbnail: {
 						id: '',
-						src: testImg4,
+						src: testImg2,
 					}
 				},
 				photo: [
 					{
 						id: '',
-						src: '',
+						src: testImg3,
+					},
+					{
+						id: '',
+						src: testImg1,
+					},
+					{
+						id: '',
+						src: testImg,
 					}
 				]
 			},
@@ -497,17 +569,25 @@ export default {
 				print: {
 					full: {
 						id: '',
-						src: testImg5,
+						src: testImg1,
 					},
 					thumbnail: {
 						id: '',
-						src: testImg5,
+						src: testImg1,
 					}
 				},
 				photo: [
 					{
 						id: '',
-						src: '',
+						src: testImg3,
+					},
+					{
+						id: '',
+						src: testImg2,
+					},
+					{
+						id: '',
+						src: testImg,
 					}
 				]
 			},
@@ -540,17 +620,25 @@ export default {
 				print: {
 					full: {
 						id: '',
-						src: testImg4,
+						src: testImg2,
 					},
 					thumbnail: {
 						id: '',
-						src: testImg4,
+						src: testImg2,
 					}
 				},
 				photo: [
 					{
 						id: '',
-						src: '',
+						src: testImg3,
+					},
+					{
+						id: '',
+						src: testImg1,
+					},
+					{
+						id: '',
+						src: testImg,
 					}
 				]
 			},
@@ -593,7 +681,15 @@ export default {
 				photo: [
 					{
 						id: '',
-						src: '',
+						src: testImg2,
+					},
+					{
+						id: '',
+						src: testImg1,
+					},
+					{
+						id: '',
+						src: testImg3,
 					}
 				]
 			},
@@ -626,17 +722,25 @@ export default {
 				print: {
 					full: {
 						id: '',
-						src: testImg5,
+						src: testImg1,
 					},
 					thumbnail: {
 						id: '',
-						src: testImg5,
+						src: testImg1,
 					}
 				},
 				photo: [
 					{
 						id: '',
-						src: '',
+						src: testImg3,
+					},
+					{
+						id: '',
+						src: testImg2,
+					},
+					{
+						id: '',
+						src: testImg,
 					}
 				]
 			},
@@ -679,7 +783,15 @@ export default {
 				photo: [
 					{
 						id: '',
-						src: '',
+						src: testImg2,
+					},
+					{
+						id: '',
+						src: testImg1,
+					},
+					{
+						id: '',
+						src: testImg3,
 					}
 				]
 			},
@@ -712,17 +824,25 @@ export default {
 				print: {
 					full: {
 						id: '',
-						src: testImg1,
+						src: testImg3,
 					},
 					thumbnail: {
 						id: '',
-						src: testImg1,
+						src: testImg3,
 					}
 				},
 				photo: [
 					{
 						id: '',
-						src: '',
+						src: testImg2,
+					},
+					{
+						id: '',
+						src: testImg1,
+					},
+					{
+						id: '',
+						src: testImg,
 					}
 				]
 			},
@@ -755,17 +875,25 @@ export default {
 				print: {
 					full: {
 						id: '',
-						src: testImg4,
+						src: testImg2,
 					},
 					thumbnail: {
 						id: '',
-						src: testImg4,
+						src: testImg2,
 					}
 				},
 				photo: [
 					{
 						id: '',
-						src: '',
+						src: testImg3,
+					},
+					{
+						id: '',
+						src: testImg1,
+					},
+					{
+						id: '',
+						src: testImg,
 					}
 				]
 			},
@@ -798,17 +926,25 @@ export default {
 				print: {
 					full: {
 						id: '',
-						src: testImg5,
+						src: testImg1,
 					},
 					thumbnail: {
 						id: '',
-						src: testImg5,
+						src: testImg1,
 					}
 				},
 				photo: [
 					{
 						id: '',
-						src: '',
+						src: testImg3,
+					},
+					{
+						id: '',
+						src: testImg2,
+					},
+					{
+						id: '',
+						src: testImg,
 					}
 				]
 			},
@@ -841,17 +977,25 @@ export default {
 				print: {
 					full: {
 						id: '',
-						src: testImg4,
+						src: testImg2,
 					},
 					thumbnail: {
 						id: '',
-						src: testImg4,
+						src: testImg2,
 					}
 				},
 				photo: [
 					{
 						id: '',
-						src: '',
+						src: testImg3,
+					},
+					{
+						id: '',
+						src: testImg1,
+					},
+					{
+						id: '',
+						src: testImg,
 					}
 				]
 			},
@@ -894,7 +1038,15 @@ export default {
 				photo: [
 					{
 						id: '',
-						src: '',
+						src: testImg2,
+					},
+					{
+						id: '',
+						src: testImg1,
+					},
+					{
+						id: '',
+						src: testImg3,
 					}
 				]
 			},
@@ -927,17 +1079,25 @@ export default {
 				print: {
 					full: {
 						id: '',
-						src: testImg5,
+						src: testImg1,
 					},
 					thumbnail: {
 						id: '',
-						src: testImg5,
+						src: testImg1,
 					}
 				},
 				photo: [
 					{
 						id: '',
-						src: '',
+						src: testImg3,
+					},
+					{
+						id: '',
+						src: testImg2,
+					},
+					{
+						id: '',
+						src: testImg,
 					}
 				]
 			},
@@ -980,7 +1140,15 @@ export default {
 				photo: [
 					{
 						id: '',
-						src: '',
+						src: testImg2,
+					},
+					{
+						id: '',
+						src: testImg1,
+					},
+					{
+						id: '',
+						src: testImg3,
 					}
 				]
 			},
@@ -1013,17 +1181,25 @@ export default {
 				print: {
 					full: {
 						id: '',
-						src: testImg1,
+						src: testImg3,
 					},
 					thumbnail: {
 						id: '',
-						src: testImg1,
+						src: testImg3,
 					}
 				},
 				photo: [
 					{
 						id: '',
-						src: '',
+						src: testImg2,
+					},
+					{
+						id: '',
+						src: testImg1,
+					},
+					{
+						id: '',
+						src: testImg,
 					}
 				]
 			},
@@ -1056,17 +1232,25 @@ export default {
 				print: {
 					full: {
 						id: '',
-						src: testImg4,
+						src: testImg2,
 					},
 					thumbnail: {
 						id: '',
-						src: testImg4,
+						src: testImg2,
 					}
 				},
 				photo: [
 					{
 						id: '',
-						src: '',
+						src: testImg3,
+					},
+					{
+						id: '',
+						src: testImg1,
+					},
+					{
+						id: '',
+						src: testImg,
 					}
 				]
 			},
@@ -1099,17 +1283,25 @@ export default {
 				print: {
 					full: {
 						id: '',
-						src: testImg5,
+						src: testImg1,
 					},
 					thumbnail: {
 						id: '',
-						src: testImg5,
+						src: testImg1,
 					}
 				},
 				photo: [
 					{
 						id: '',
-						src: '',
+						src: testImg3,
+					},
+					{
+						id: '',
+						src: testImg2,
+					},
+					{
+						id: '',
+						src: testImg,
 					}
 				]
 			},
@@ -1142,17 +1334,25 @@ export default {
 				print: {
 					full: {
 						id: '',
-						src: testImg4,
+						src: testImg2,
 					},
 					thumbnail: {
 						id: '',
-						src: testImg4,
+						src: testImg2,
 					}
 				},
 				photo: [
 					{
 						id: '',
-						src: '',
+						src: testImg3,
+					},
+					{
+						id: '',
+						src: testImg1,
+					},
+					{
+						id: '',
+						src: testImg,
 					}
 				]
 			},
@@ -1195,7 +1395,15 @@ export default {
 				photo: [
 					{
 						id: '',
-						src: '',
+						src: testImg2,
+					},
+					{
+						id: '',
+						src: testImg1,
+					},
+					{
+						id: '',
+						src: testImg3,
 					}
 				]
 			},
@@ -1238,7 +1446,15 @@ export default {
 				photo: [
 					{
 						id: '',
-						src: '',
+						src: testImg2,
+					},
+					{
+						id: '',
+						src: testImg1,
+					},
+					{
+						id: '',
+						src: testImg3,
 					}
 				]
 			},

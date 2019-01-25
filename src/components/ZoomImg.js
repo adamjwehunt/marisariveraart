@@ -1,6 +1,7 @@
 import React from 'react';
 import posed from 'react-pose';
 import Rect from "@reach/rect";
+import SliderImg from './SliderImg';
 
 let lastScrollTop = 0;
 let hasScrolled = false;
@@ -72,7 +73,7 @@ const transition = {
 	ease: [0.08, 0.69, 0.2, 0.99]
 };
 
-const Image = posed.img({
+const ImgWrapper = posed.div({
 	init: {
 		position: 'static',
 		width: '100%',
@@ -129,18 +130,51 @@ const ZoomImg = ({
 							pose={pose}
 							css={frame}
 						/>
-						<Image
-							onClick={() => !isNavOpen && zoomedImgId ? zoomOut() : zoomIn(art)}
+						<ImgWrapper
+							// onClick={() => !isNavOpen && zoomedImgId ? zoomOut() : zoomIn(art)}
 							pose={pose}
 							zoomedWidth={zoomedWidth}
 							zoomedHeight={zoomedHeight}
-							src={art.image.print.full.src}
 							css={{
 								maxHeight: isZoomed ? '90%' : 'auto',
 								cursor: isZoomed ? 'zoom-out' : 'zoom-in',
-								objectFit: isZoomed ? 'contain' : 'cover',
+								margin: 'auto'
 							}}
-						/>
+						>
+							{/* <img
+								src={art.image.print.full.src}
+								alt={art.image.print.full.alt}
+								css={{
+									height: '100%',
+									width: 'fit-content',
+									objectFit: isZoomed ? 'contain' : 'cover',
+								}}
+							/> */}
+							{
+								isZoomed ?
+									<SliderImg
+										artId={art.id}
+										// src={art.image.print.full.src}
+										// alt={art.image.print.full.alt}
+										css={{
+											height: '100%',
+											width: 'fit-content',
+											objectFit: 'contain',
+										}}
+									/>
+								:
+									<img
+										onClick={() => !isNavOpen && zoomIn(art)}
+										src={art.image.print.full.src}
+										alt={art.image.print.full.alt}
+										css={{
+											height: '100%',
+											width: 'fit-content',
+											objectFit: 'cover',
+										}}
+									/>
+							}
+						</ImgWrapper>
 					</div>
 				)}
 			}

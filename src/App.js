@@ -9,7 +9,6 @@ import Header from './components/header';
 import ViewToggle from './components/ViewToggle';
 import Navigation from './components/navigation';
 import Main from './components/Main';
-// import DirectionToggles from './components/DirectionToggles';
 import './App.less';
 
 const app = {
@@ -62,11 +61,6 @@ class App extends PureComponent {
 						/>
 					}
 				/>
-				{/* <DirectionToggles
-					onToggleZoom={this.handleToggleZoom}
-					zoomedImgId={zoomedImgId}
-					isNavOpen={isNavOpen}
-				/> */}
 			</div>
 		);
 	}

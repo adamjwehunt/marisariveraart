@@ -28,7 +28,7 @@ class DirectionToggles extends Component {
 		scrollInterval: 0,
 		startScroll: 0,
 		nextImgId: undefined,
-		prevImgId: undefined
+		prevImgId: undefined,
 		// touched: false,
 		// hasScrolled: false
 	};
