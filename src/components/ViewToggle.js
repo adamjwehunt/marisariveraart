@@ -40,7 +40,7 @@ const ViewToggle = ({
 				...viewToggleWrapper,
 				transform: !isNavOpen && !zoomedImgId ?
 					`translateY(${isVisible ? '0' : 'calc(-' + viewToggleWrapper.height + ' - ' + viewToggleWrapper.top}))`
-					: null
+					: undefined
 				}}>
 				<button onClick={handleClick}>
 					<ViewToggleIcon

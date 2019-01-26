@@ -28,7 +28,7 @@ const Main = ({
 	zoomedImgId
 }) => (
 	<main
-		onClick={isNavOpen ? onToggleNav : null}
+		onClick={isNavOpen ? onToggleNav : undefined}
 		css={{
 		...main,
 			transform: isNavOpen ? 'translate(-240px,0)' : 'initial',

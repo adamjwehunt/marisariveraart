@@ -123,7 +123,7 @@ class DirectionToggles extends Component {
 						transition: `transform .2s ease-in-out${!zoomedImgId ? ', opacity .35s cubic-bezier(0.08, 0.69, 0.2, 0.99) .35s' : ''}`,
 						transform: !zoomedImgId ?
 							`translateY(${zoomedImgId && isVisible ? '0' : 'calc(' + directionToggles.height + ' + ' + directionToggles.bottom}))` :
-							null
+							undefined
 					}}>
 						<button
 							onClick={this.handleClickLeft}
@@ -138,7 +138,7 @@ class DirectionToggles extends Component {
 						transition: `transform .2s ease-in-out${!(zoomedImgId || isVisible) ? ', opacity .35s cubic-bezier(0.08, 0.69, 0.2, 0.99) .35s' : ''}`,
 						transform: !zoomedImgId ?
 							`translateY(${isVisible && !isNavOpen ? '0' : 'calc(' + directionToggles.height + ' + ' + directionToggles.bottom}))` :
-							null
+							undefined
 					}}>
 						<button
 							onClick={this.handleClickRight}

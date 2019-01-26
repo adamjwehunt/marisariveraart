@@ -5,11 +5,10 @@ import {
 	Route
 } from "react-router-dom";
 import styles from './styles'
-import Header from './components/header';
+import Header from './components/Header';
 import ViewToggle from './components/ViewToggle';
-import Navigation from './components/navigation';
+import Navigation from './components/Navigation';
 import Main from './components/Main';
-// import DirectionToggles from './components/DirectionToggles';
 import './App.less';
 
 const app = {
@@ -62,11 +61,6 @@ class App extends PureComponent {
 						/>
 					}
 				/>
-				{/* <DirectionToggles
-					onToggleZoom={this.handleToggleZoom}
-					zoomedImgId={zoomedImgId}
-					isNavOpen={isNavOpen}
-				/> */}
 			</div>
 		);
 	}

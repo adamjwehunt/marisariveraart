@@ -1,6 +1,6 @@
 import React from 'react';
 import content from '../services/content';
-import ZoomImg from './ZoomImg'
+import Art from './Art'
 
 const collectionGrid = {
 	display: 'grid',
@@ -20,14 +20,14 @@ const Collection = ({
 			{
 				content.artList.map((art, i) =>
 					art.collectionId === activeCollectionId ?
-						<ZoomImg
+						<Art
 							key={i}
 							art={art}
 							onToggleZoom={onToggleZoom}
 							isNavOpen={isNavOpen}
 							zoomedImgId={zoomedImgId}
 						/>
-					: null
+					: undefined
 				)
 			}
 		</div>
