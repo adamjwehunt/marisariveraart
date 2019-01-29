@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import {
 	Route
 } from "react-router-dom";
@@ -10,7 +10,6 @@ import Faq from './Faq';
 import Blog from './Blog';
 import Shop from './Shop';
 import Contact from './Contact';
-import DirectionToggles from './DirectionToggles';
 
 const main = {
 	position: 'relative',
@@ -39,18 +38,11 @@ const Main = ({
 			exact
 			path="/"
 			render={() =>
-				<Fragment>
-					<Gallery 
-						onToggleZoom={onToggleZoom}
-						zoomedImgId={zoomedImgId}
-						isNavOpen={isNavOpen}
-					/>
-					<DirectionToggles
-						onToggleZoom={onToggleZoom}
-						zoomedImgId={zoomedImgId}
-						isNavOpen={isNavOpen}
-					/>
-				</Fragment>
+				<Gallery 
+					onToggleZoom={onToggleZoom}
+					zoomedImgId={zoomedImgId}
+					isNavOpen={isNavOpen}
+				/>
 			}
 		/>
 		<Route path="/about" component={About} />

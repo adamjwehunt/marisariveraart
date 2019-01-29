@@ -1,12 +1,10 @@
 import React, {
-	PureComponent
+	PureComponent,
+	Fragment
 } from 'react';
 import Collection from './Collection'
 import CollectionPicker from './CollectionPicker'
-
-const gallerWrapper = {
-	//add animate
-};
+// import DirectionToggles from './DirectionToggles';
 
 class Gallery extends PureComponent {
 	state = {
@@ -27,7 +25,7 @@ class Gallery extends PureComponent {
 		} = this.props;
 
 		return (
-			<div css={gallerWrapper}>
+			<Fragment>
 				<CollectionPicker
 					collectionChange={this.handleCollectionChange}
 				/>
@@ -37,7 +35,12 @@ class Gallery extends PureComponent {
 					isNavOpen={isNavOpen}
 					zoomedImgId={zoomedImgId}
 				/>
-			</div>
+				{/* <DirectionToggles
+						onToggleZoom={onToggleZoom}
+						zoomedImgId={zoomedImgId}
+						isNavOpen={isNavOpen}
+					/> */}
+			</Fragment>
 		);
 	}
 }

@@ -2,6 +2,7 @@ import testImg from '../images/7.jpg'
 import testImg5 from '../images/5.jpg'
 import testImg4 from '../images/4.jpg'
 import testImg1 from '../images/1.jpg'
+const baseImgUri = 'https://res.cloudinary.com/marisariveraart/image/upload/'
 
 export default {
 	// about: {
@@ -23,10 +24,7 @@ export default {
 	//				 gallery: [
 	//					 {
 	//						 image: {
-	//							 thumbnail: '',
-	//						 }
-	//					 }
-	//				 ]
+
 	//			 }
 	//		 }
 	//	 ]
@@ -71,7 +69,7 @@ export default {
 			title: 'Delicate Dusk',
 			description: 'Stuff that makes me anna love allover.',
 			image: {
-				thumbnailSrc: testImg1,
+				thumbnailSrc: baseImgUri + 'v1548636157/Delicate%20Dust/Warm-Wishes-ORIGINAL-SCAN.jpg',
 			},
 		},
 		2: {
@@ -100,22 +98,17 @@ export default {
 		{
 			id: '1',
 			collectionId: '1',
-			title: 'Willow',
+			title: 'Warm Wishes',
 			description: '',
-			medium: 'acrylic',
-			material: 'canvas',
+			medium: 'water color',
+			material: 'paper',
 			width: 5,
 			height: 7,
 			image: {
 				print: {
 					full: {
-						id: '',
-						src: testImg1,
+						src: baseImgUri + 'v1548636157/Delicate%20Dust/Warm-Wishes-ORIGINAL-SCAN.jpg',
 					},
-					thumbnail: {
-						id: '',
-						src: testImg1,
-					}
 				},
 				photo: [
 					{
@@ -143,22 +136,17 @@ export default {
 		{
 			id: '2',
 			collectionId: '1',
-			title: 'Willow',
+			title: 'Star Plant',
 			description: '',
-			medium: 'acrylic',
-			material: 'canvas',
+			medium: 'water color',
+			material: 'paper',
 			width: 5,
 			height: 7,
 			image: {
 				print: {
 					full: {
-						id: '',
-						src: testImg4,
+						src: baseImgUri + 'v1548636151/Delicate%20Dust/Star-Plant.jpg',
 					},
-					thumbnail: {
-						id: '',
-						src: testImg4,
-					}
 				},
 				photo: [
 					{
@@ -186,22 +174,17 @@ export default {
 		{
 			id: '3',
 			collectionId: '1',
-			title: 'Willow',
+			title: 'Night Paths',
 			description: '',
-			medium: 'acrylic',
-			material: 'canvas',
+			medium: 'water color',
+			material: 'paper',
 			width: 5,
 			height: 7,
 			image: {
 				print: {
 					full: {
-						id: '',
-						src: testImg5,
+						src: baseImgUri + 'v1548636139/Delicate%20Dust/Night-Paths-_ORIGINAL-SCAN.jpg',
 					},
-					thumbnail: {
-						id: '',
-						src: testImg5,
-					}
 				},
 				photo: [
 					{
@@ -229,22 +212,17 @@ export default {
 		{
 			id: '4',
 			collectionId: '1',
-			title: 'Willow',
+			title: 'Star Fields',
 			description: '',
-			medium: 'acrylic',
-			material: 'canvas',
+			medium: 'water color',
+			material: 'paper',
 			width: 5,
 			height: 7,
 			image: {
 				print: {
 					full: {
-						id: '',
-						src: testImg4,
+						src: baseImgUri + 'v1548636150/Delicate%20Dust/Star-Fields-ORIGINAL-SCAN.jpg',
 					},
-					thumbnail: {
-						id: '',
-						src: testImg4,
-					}
 				},
 				photo: [
 					{
@@ -272,22 +250,17 @@ export default {
 		{
 			id: '5',
 			collectionId: '1',
-			title: 'Willow',
+			title: 'Vanilla Air',
 			description: '',
-			medium: 'acrylic',
-			material: 'canvas',
+			medium: 'water color',
+			material: 'paper',
 			width: 5,
 			height: 7,
 			image: {
 				print: {
 					full: {
-						id: '',
-						src: testImg,
+						src: baseImgUri + 'v1548636155/Delicate%20Dust/Vanilla-Air-ORIGINAL-SCAN.jpg',
 					},
-					thumbnail: {
-						id: '',
-						src: testImg,
-					}
 				},
 				photo: [
 					{
@@ -312,25 +285,20 @@ export default {
 				}
 			}
 		},
-				{
+		{
 			id: '6',
 			collectionId: '1',
-			title: 'Willow',
+			title: 'Favorite Change',
 			description: '',
 			medium: 'water color',
-			material: 'canvas',
+			material: 'paper',
 			width: 5,
 			height: 7,
 			image: {
 				print: {
 					full: {
-						id: '',
-						src: testImg5,
+						src: baseImgUri + 'v1548636127/Delicate%20Dust/Favorite-Change-_ORIGINAL-SCAN.jpg',
 					},
-					thumbnail: {
-						id: '',
-						src: testImg5,
-					}
 				},
 				photo: [
 					{
@@ -358,22 +326,17 @@ export default {
 		{
 			id: '7',
 			collectionId: '1',
-			title: 'Willow',
+			title: 'Soft Control',
 			description: '',
 			medium: 'water color',
-			material: 'canvas',
+			material: 'paper',
 			width: 5,
 			height: 7,
 			image: {
 				print: {
 					full: {
-						id: '',
-						src: testImg,
+						src: baseImgUri + 'v1548636147/Delicate%20Dust/Soft-Control-ORIGINAL-SCAN.jpg',
 					},
-					thumbnail: {
-						id: '',
-						src: testImg,
-					}
 				},
 				photo: [
 					{
@@ -401,22 +364,17 @@ export default {
 		{
 			id: '8',
 			collectionId: '1',
-			title: 'Willow',
+			title: 'Tiny Textures',
 			description: '',
 			medium: 'water color',
-			material: 'canvas',
+			material: 'paper',
 			width: 5,
 			height: 7,
 			image: {
 				print: {
 					full: {
-						id: '',
-						src: testImg1,
+						src: baseImgUri + 'v1548636153/Delicate%20Dust/Tiny-Textures-ORIGINAL-SCAN.jpg',
 					},
-					thumbnail: {
-						id: '',
-						src: testImg1,
-					}
 				},
 				photo: [
 					{
@@ -444,22 +402,17 @@ export default {
 		{
 			id: '9',
 			collectionId: '1',
-			title: 'Willow',
+			title: 'Rose Relection',
 			description: '',
 			medium: 'water color',
-			material: 'canvas',
+			material: 'paper',
 			width: 5,
 			height: 7,
 			image: {
 				print: {
 					full: {
-						id: '',
-						src: testImg4,
+						src: baseImgUri + 'v1548636146/Delicate%20Dust/Rose-Reflection.jpg',
 					},
-					thumbnail: {
-						id: '',
-						src: testImg4,
-					}
 				},
 				photo: [
 					{
@@ -487,22 +440,17 @@ export default {
 		{
 			id: '10',
 			collectionId: '1',
-			title: 'Willow',
+			title: 'Nature Hug',
 			description: '',
 			medium: 'water color',
-			material: 'canvas',
+			material: 'paper',
 			width: 5,
 			height: 7,
 			image: {
 				print: {
 					full: {
-						id: '',
-						src: testImg5,
+						src: baseImgUri + 'v1548636136/Delicate%20Dust/Nature-Hug.jpg',
 					},
-					thumbnail: {
-						id: '',
-						src: testImg5,
-					}
 				},
 				photo: [
 					{
@@ -529,23 +477,18 @@ export default {
 		},
 		{
 			id: '11',
-			collectionId: '2',
-			title: 'Willow',
+			collectionId: '1',
+			title: 'Open Door',
 			description: '',
 			medium: 'water color',
-			material: 'canvas',
+			material: 'Canvas',
 			width: 5,
 			height: 7,
 			image: {
 				print: {
 					full: {
-						id: '',
-						src: testImg4,
+						src: baseImgUri + 'v1548636140/Delicate%20Dust/Open-Door.jpg',
 					},
-					thumbnail: {
-						id: '',
-						src: testImg4,
-					}
 				},
 				photo: [
 					{
@@ -572,8 +515,8 @@ export default {
 		},
 		{
 			id: '12',
-			collectionId: '2',
-			title: 'Willow',
+			collectionId: '1',
+			title: 'Let\'s go',
 			description: '',
 			medium: 'acrylic',
 			material: 'canvas',
@@ -582,13 +525,8 @@ export default {
 			image: {
 				print: {
 					full: {
-						id: '',
-						src: testImg,
+						src: baseImgUri + 'v1548636135/Delicate%20Dust/Let_s-Go.jpg',
 					},
-					thumbnail: {
-						id: '',
-						src: testImg,
-					}
 				},
 				photo: [
 					{
@@ -615,23 +553,18 @@ export default {
 		},
 		{
 			id: '13',
-			collectionId: '2',
-			title: 'Willow',
+			collectionId: '1',
+			title: 'Give',
 			description: '',
-			medium: 'acrylic',
-			material: 'canvas',
+			medium: 'water color',
+			material: 'paper',
 			width: 5,
 			height: 7,
 			image: {
 				print: {
 					full: {
-						id: '',
-						src: testImg5,
+						src: baseImgUri + 'v1548636133/Delicate%20Dust/Give-ORIGINAL-SCAN.jpg',
 					},
-					thumbnail: {
-						id: '',
-						src: testImg5,
-					}
 				},
 				photo: [
 					{
@@ -658,23 +591,18 @@ export default {
 		},
 		{
 			id: '14',
-			collectionId: '2',
-			title: 'Willow',
+			collectionId: '1',
+			title: 'Float In',
 			description: '',
-			medium: 'acrylic',
-			material: 'canvas',
+			medium: 'water color',
+			material: 'paper',
 			width: 5,
 			height: 7,
 			image: {
 				print: {
 					full: {
-						id: '',
-						src: testImg,
+						src: baseImgUri + 'v1548636131/Delicate%20Dust/Float-In-_ORIGINAL-SCAN.jpg',
 					},
-					thumbnail: {
-						id: '',
-						src: testImg,
-					}
 				},
 				photo: [
 					{
@@ -701,23 +629,18 @@ export default {
 		},
 		{
 			id: '15',
-			collectionId: '2',
-			title: 'Willow',
+			collectionId: '1',
+			title: 'Float Away',
 			description: '',
-			medium: 'acrylic',
-			material: 'canvas',
+			medium: 'water color',
+			material: 'paper',
 			width: 5,
 			height: 7,
 			image: {
 				print: {
 					full: {
-						id: '',
-						src: testImg1,
+						src: baseImgUri + 'v1548636128/Delicate%20Dust/Float-Away-_ORIGINAL-SCAN.jpg',
 					},
-					thumbnail: {
-						id: '',
-						src: testImg1,
-					}
 				},
 				photo: [
 					{
@@ -744,23 +667,18 @@ export default {
 		},
 		{
 			id: '16',
-			collectionId: '2',
-			title: 'Willow',
+			collectionId: '1',
+			title: 'Favorite Change',
 			description: '',
-			medium: 'acrylic',
-			material: 'canvas',
+			medium: 'water color',
+			material: 'paper',
 			width: 5,
 			height: 7,
 			image: {
 				print: {
 					full: {
-						id: '',
-						src: testImg4,
+						src: baseImgUri + 'v1548636127/Delicate%20Dust/Favorite-Change-_ORIGINAL-SCAN.jpg',
 					},
-					thumbnail: {
-						id: '',
-						src: testImg4,
-					}
 				},
 				photo: [
 					{
@@ -787,23 +705,18 @@ export default {
 		},
 		{
 			id: '17',
-			collectionId: '2',
-			title: 'Willow',
+			collectionId: '1',
+			title: 'Bright Fade',
 			description: '',
-			medium: 'acrylic',
-			material: 'canvas',
+			medium: 'water color',
+			material: 'paper',
 			width: 5,
 			height: 7,
 			image: {
 				print: {
 					full: {
-						id: '',
-						src: testImg5,
+						src: baseImgUri + 'v1548636124/Delicate%20Dust/Bright-Fade-_ORIGINAL-SCAN.jpg',
 					},
-					thumbnail: {
-						id: '',
-						src: testImg5,
-					}
 				},
 				photo: [
 					{
@@ -830,23 +743,18 @@ export default {
 		},
 		{
 			id: '18',
-			collectionId: '2',
-			title: 'Willow',
+			collectionId: '1',
+			title: 'Athens Stardust',
 			description: '',
-			medium: 'acrylic',
-			material: 'canvas',
+			medium: 'water color',
+			material: 'paper',
 			width: 5,
 			height: 7,
 			image: {
 				print: {
 					full: {
-						id: '',
-						src: testImg4,
+						src: baseImgUri + 'v1548636123/Delicate%20Dust/Athens-Stardust-ORIGINAL-SCAN.jpg',
 					},
-					thumbnail: {
-						id: '',
-						src: testImg4,
-					}
 				},
 				photo: [
 					{
@@ -883,13 +791,8 @@ export default {
 			image: {
 				print: {
 					full: {
-						id: '',
 						src: testImg,
 					},
-					thumbnail: {
-						id: '',
-						src: testImg,
-					}
 				},
 				photo: [
 					{
@@ -926,13 +829,8 @@ export default {
 			image: {
 				print: {
 					full: {
-						id: '',
 						src: testImg5,
 					},
-					thumbnail: {
-						id: '',
-						src: testImg5,
-					}
 				},
 				photo: [
 					{
@@ -969,13 +867,8 @@ export default {
 			image: {
 				print: {
 					full: {
-						id: '',
 						src: testImg,
 					},
-					thumbnail: {
-						id: '',
-						src: testImg,
-					}
 				},
 				photo: [
 					{
@@ -1012,13 +905,8 @@ export default {
 			image: {
 				print: {
 					full: {
-						id: '',
 						src: testImg1,
 					},
-					thumbnail: {
-						id: '',
-						src: testImg1,
-					}
 				},
 				photo: [
 					{
@@ -1055,13 +943,8 @@ export default {
 			image: {
 				print: {
 					full: {
-						id: '',
 						src: testImg4,
 					},
-					thumbnail: {
-						id: '',
-						src: testImg4,
-					}
 				},
 				photo: [
 					{
@@ -1098,13 +981,8 @@ export default {
 			image: {
 				print: {
 					full: {
-						id: '',
 						src: testImg5,
 					},
-					thumbnail: {
-						id: '',
-						src: testImg5,
-					}
 				},
 				photo: [
 					{
@@ -1141,13 +1019,8 @@ export default {
 			image: {
 				print: {
 					full: {
-						id: '',
 						src: testImg4,
 					},
-					thumbnail: {
-						id: '',
-						src: testImg4,
-					}
 				},
 				photo: [
 					{
@@ -1184,13 +1057,8 @@ export default {
 			image: {
 				print: {
 					full: {
-						id: '',
 						src: testImg,
 					},
-					thumbnail: {
-						id: '',
-						src: testImg,
-					}
 				},
 				photo: [
 					{
@@ -1217,7 +1085,7 @@ export default {
 		},
 		{
 			id: '27',
-			collectionId: '1',
+			collectionId: '2',
 			title: 'Willow',
 			description: '',
 			medium: 'acrylic',
@@ -1227,13 +1095,8 @@ export default {
 			image: {
 				print: {
 					full: {
-						id: '',
 						src: testImg,
 					},
-					thumbnail: {
-						id: '',
-						src: testImg,
-					}
 				},
 				photo: [
 					{

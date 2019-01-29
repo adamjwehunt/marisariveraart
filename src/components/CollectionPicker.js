@@ -2,7 +2,6 @@ import React from 'react';
 import content from '../services/content';
 import posed from 'react-pose';
 
-
 const collectionPicker = {
 	display: 'grid',
 	gridGap: '12px',
@@ -34,18 +33,16 @@ const Box = posed.div({
 	hoverable: true,
 	pressable: true,
 	init: {
-		scale: 1,
 		boxShadow: '0px 0px 0px rgba(0,0,0,0)'
 	},
 	hover: {
-		scale: 1.018,
 		boxShadow: '0px 2px 4px rgba(0,0,0,0.2)'
 	},
 	press: {
-		scale: 1.01,
 		boxShadow: '0px 1px 2px rgba(0,0,0,0.1)'
 	}
 });
+
 const CollectionPicker = ({
 	collectionChange
 }) => {

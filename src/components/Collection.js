@@ -4,7 +4,7 @@ import Art from './Art'
 
 const collectionGrid = {
 	display: 'grid',
-	gridGap: '24px',
+	gridGap: '40px',
 	gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))'
 };
 

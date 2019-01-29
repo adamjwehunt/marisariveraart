@@ -1,7 +1,7 @@
 import React from 'react';
 import Rect from "@reach/rect";
-import ArtFrame from './ArtFrame'
-import ArtImage from './ArtImage'
+import ArtBackground from './ArtBackground'
+import ArtContent from './ArtContent'
 
 let lastScrollTop = 0;
 let hasScrolled = false;
@@ -50,7 +50,6 @@ const Art = ({
 }) => {
 	const isZoomed = zoomedImgId === art.id;
 	const pose = isZoomed ? 'zoom' : 'init';
-	const imgSrc = art.image.print.full.src;
 	toggleZoom = onToggleZoom
 
 	return (
@@ -70,16 +69,16 @@ const Art = ({
 								maxHeight: !isZoomed && '938px',
 							}}
 						>
-							<ArtFrame
+							<ArtBackground
 								handleOnClick={() => isZoomed && zoomOut()}
 								pose={pose}
 							/>
-							<ArtImage
+							<ArtContent
 								handleOnClick={() => !isZoomed && !isNavOpen && zoomIn(art)}
 								pose={pose}
 								zoomedWidth={rectWidth}
 								zoomedHeight={rectHeight}
-								src={imgSrc}
+								art={art}
 								isZoomed={isZoomed}
 							/>
 						</div>

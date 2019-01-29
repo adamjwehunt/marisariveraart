@@ -27,7 +27,7 @@ const Frame = posed.div({
 	}
 });
 
-const ArtFrame = ({
+const ArtBackground = ({
 	pose,
 	handleOnClick
 }) => (
@@ -38,4 +38,4 @@ const ArtFrame = ({
 	/>
 )
 
-export default ArtFrame;
+export default ArtBackground;
