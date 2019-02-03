@@ -13,7 +13,8 @@ const header = {
 	height: '58px',
 	width: '100%',
 	maxWidth: styles.appMaxWidth,
-	transition: 'transform .2s ease-in-out, opacity 350ms cubic-bezier(0.08, 0.69, 0.2, 0.99)',
+	transition:
+		'transform .2s ease-in-out, opacity 350ms cubic-bezier(0.08, 0.69, 0.2, 0.99)',
 
 	'.logo': {
 		padding: '11px 0 0 16px',

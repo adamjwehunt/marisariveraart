@@ -14,18 +14,23 @@ class Gallery extends Component {
 		const router = props.router;
 		if (router) {
 			let activeCollectionId = '1';
-			const imgIdParam = router && router.match && router.match.params && router.match.params.imgId;
-			const imgId = content.artList.some(art => art.id === imgIdParam) && imgIdParam;
+			const imgIdParam =
+				router &&
+				router.match &&
+				router.match.params &&
+				router.match.params.imgId;
+			const imgId =
+				content.artList.some(art => art.id === imgIdParam) && imgIdParam;
 
 			if (imgId) {
-				activeCollectionId = content.artList.find(art => art.id === imgId).collectionId;
+				activeCollectionId = content.artList.find(art => art.id === imgId)
+					.collectionId;
 
 				return {
 					activeCollectionId,
 				};
 			}
 		}
-
 		return null;
 	}
 

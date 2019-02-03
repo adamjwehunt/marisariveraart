@@ -70,7 +70,9 @@ export default {
 			title: 'Delicate Dusk',
 			description: 'Stuff that makes me anna love allover.',
 			image: {
-				thumbnailSrc: baseImgUri + 'v1548636157/Delicate%20Dust/Warm-Wishes-ORIGINAL-SCAN.jpg',
+				thumbnailSrc:
+					baseImgUri +
+					'v1548636157/Delicate%20Dust/Warm-Wishes-ORIGINAL-SCAN.jpg',
 			},
 		},
 		2: {
@@ -108,7 +110,9 @@ export default {
 			image: {
 				print: {
 					full: {
-						src: baseImgUri + 'v1548636157/Delicate%20Dust/Warm-Wishes-ORIGINAL-SCAN.jpg',
+						src:
+							baseImgUri +
+							'v1548636157/Delicate%20Dust/Warm-Wishes-ORIGINAL-SCAN.jpg',
 					},
 				},
 				photo: [
@@ -184,7 +188,9 @@ export default {
 			image: {
 				print: {
 					full: {
-						src: baseImgUri + 'v1548636139/Delicate%20Dust/Night-Paths-_ORIGINAL-SCAN.jpg',
+						src:
+							baseImgUri +
+							'v1548636139/Delicate%20Dust/Night-Paths-_ORIGINAL-SCAN.jpg',
 					},
 				},
 				photo: [
@@ -222,7 +228,9 @@ export default {
 			image: {
 				print: {
 					full: {
-						src: baseImgUri + 'v1548636150/Delicate%20Dust/Star-Fields-ORIGINAL-SCAN.jpg',
+						src:
+							baseImgUri +
+							'v1548636150/Delicate%20Dust/Star-Fields-ORIGINAL-SCAN.jpg',
 					},
 				},
 				photo: [
@@ -260,7 +268,9 @@ export default {
 			image: {
 				print: {
 					full: {
-						src: baseImgUri + 'v1548636155/Delicate%20Dust/Vanilla-Air-ORIGINAL-SCAN.jpg',
+						src:
+							baseImgUri +
+							'v1548636155/Delicate%20Dust/Vanilla-Air-ORIGINAL-SCAN.jpg',
 					},
 				},
 				photo: [
@@ -298,7 +308,9 @@ export default {
 			image: {
 				print: {
 					full: {
-						src: baseImgUri + 'v1548636127/Delicate%20Dust/Favorite-Change-_ORIGINAL-SCAN.jpg',
+						src:
+							baseImgUri +
+							'v1548636127/Delicate%20Dust/Favorite-Change-_ORIGINAL-SCAN.jpg',
 					},
 				},
 				photo: [
@@ -336,7 +348,9 @@ export default {
 			image: {
 				print: {
 					full: {
-						src: baseImgUri + 'v1548636147/Delicate%20Dust/Soft-Control-ORIGINAL-SCAN.jpg',
+						src:
+							baseImgUri +
+							'v1548636147/Delicate%20Dust/Soft-Control-ORIGINAL-SCAN.jpg',
 					},
 				},
 				photo: [
@@ -374,7 +388,9 @@ export default {
 			image: {
 				print: {
 					full: {
-						src: baseImgUri + 'v1548636153/Delicate%20Dust/Tiny-Textures-ORIGINAL-SCAN.jpg',
+						src:
+							baseImgUri +
+							'v1548636153/Delicate%20Dust/Tiny-Textures-ORIGINAL-SCAN.jpg',
 					},
 				},
 				photo: [
@@ -564,7 +580,8 @@ export default {
 			image: {
 				print: {
 					full: {
-						src: baseImgUri + 'v1548636133/Delicate%20Dust/Give-ORIGINAL-SCAN.jpg',
+						src:
+							baseImgUri + 'v1548636133/Delicate%20Dust/Give-ORIGINAL-SCAN.jpg',
 					},
 				},
 				photo: [
@@ -602,7 +619,9 @@ export default {
 			image: {
 				print: {
 					full: {
-						src: baseImgUri + 'v1548636131/Delicate%20Dust/Float-In-_ORIGINAL-SCAN.jpg',
+						src:
+							baseImgUri +
+							'v1548636131/Delicate%20Dust/Float-In-_ORIGINAL-SCAN.jpg',
 					},
 				},
 				photo: [
@@ -640,7 +659,9 @@ export default {
 			image: {
 				print: {
 					full: {
-						src: baseImgUri + 'v1548636128/Delicate%20Dust/Float-Away-_ORIGINAL-SCAN.jpg',
+						src:
+							baseImgUri +
+							'v1548636128/Delicate%20Dust/Float-Away-_ORIGINAL-SCAN.jpg',
 					},
 				},
 				photo: [
@@ -678,7 +699,9 @@ export default {
 			image: {
 				print: {
 					full: {
-						src: baseImgUri + 'v1548636127/Delicate%20Dust/Favorite-Change-_ORIGINAL-SCAN.jpg',
+						src:
+							baseImgUri +
+							'v1548636127/Delicate%20Dust/Favorite-Change-_ORIGINAL-SCAN.jpg',
 					},
 				},
 				photo: [
@@ -716,7 +739,9 @@ export default {
 			image: {
 				print: {
 					full: {
-						src: baseImgUri + 'v1548636124/Delicate%20Dust/Bright-Fade-_ORIGINAL-SCAN.jpg',
+						src:
+							baseImgUri +
+							'v1548636124/Delicate%20Dust/Bright-Fade-_ORIGINAL-SCAN.jpg',
 					},
 				},
 				photo: [
@@ -754,7 +779,9 @@ export default {
 			image: {
 				print: {
 					full: {
-						src: baseImgUri + 'v1548636123/Delicate%20Dust/Athens-Stardust-ORIGINAL-SCAN.jpg',
+						src:
+							baseImgUri +
+							'v1548636123/Delicate%20Dust/Athens-Stardust-ORIGINAL-SCAN.jpg',
 					},
 				},
 				photo: [

@@ -8,7 +8,13 @@ const collectionGrid = {
 	gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
 };
 
-const Collection = ({ activeCollectionId, onSetActiveArt, isNavOpen, activeArtId, router }) => (
+const Collection = ({
+	activeCollectionId,
+	onSetActiveArt,
+	isNavOpen,
+	activeArtId,
+	router,
+}) => (
 	<section>
 		<h1>{content.collection[activeCollectionId].title}</h1>
 		<div css={collectionGrid}>

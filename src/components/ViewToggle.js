@@ -20,7 +20,12 @@ const viewToggleWrapper = {
 	},
 };
 
-const ViewToggle = ({ isNavOpen, activeArtId, onToggleNav, onSetActiveArt }) => {
+const ViewToggle = ({
+	isNavOpen,
+	activeArtId,
+	onToggleNav,
+	onSetActiveArt,
+}) => {
 	const handleClick = () => {
 		if (activeArtId) {
 			onSetActiveArt(undefined);
@@ -41,7 +46,10 @@ const ViewToggle = ({ isNavOpen, activeArtId, onToggleNav, onSetActiveArt }) => 
 								? `translateY(${
 										isVisible
 											? '0'
-											: 'calc(-' + viewToggleWrapper.height + ' - ' + viewToggleWrapper.top
+											: 'calc(-' +
+											  viewToggleWrapper.height +
+											  ' - ' +
+											  viewToggleWrapper.top
 								  }))`
 								: undefined,
 					}}

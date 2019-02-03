@@ -28,13 +28,17 @@ const ViewToggleIcon = ({ isMenuIcon }) => {
 		<div css={viewToggleIcon}>
 			<span
 				css={{
-					transform: `${rotate(-45)} translateY(${translate}) translateX(-${translate})`,
+					transform: `${rotate(
+						-45
+					)} translateY(${translate}) translateX(-${translate})`,
 					top: offset,
 				}}
 			/>
 			<span
 				css={{
-					transform: `${rotate(45)} translateY(-${translate}) translateX(-${translate})`,
+					transform: `${rotate(
+						45
+					)} translateY(-${translate}) translateX(-${translate})`,
 					bottom: offset,
 				}}
 			/>
