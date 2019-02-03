@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles'
+import styles from '../styles';
 import NavLinks from './NavLinks';
 
 const navWrapper = {
@@ -14,18 +14,16 @@ const navWrapper = {
 	right: '0',
 	left: '0',
 	bottom: '0',
-}
+};
+
 const nav = {
 	zIndex: '0',
 	width: '240px',
 	height: '100%',
 	transition: styles.transform,
-}
+};
 
-const Navigation = ({
-	isNavOpen,
-	onToggleNav
-}) => (
+const Navigation = ({ isNavOpen, onToggleNav }) => (
 	<div css={navWrapper}>
 		<nav
 			css={{
@@ -33,10 +31,7 @@ const Navigation = ({
 				transform: `translatex(${isNavOpen ? '0' : '100px'})`,
 			}}
 		>
-			<NavLinks
-				isNavOpen={isNavOpen}
-				onToggleNav={onToggleNav}
-			/>
+			<NavLinks isNavOpen={isNavOpen} onToggleNav={onToggleNav} />
 		</nav>
 	</div>
 );

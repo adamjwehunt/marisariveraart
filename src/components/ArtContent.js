@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import posed from 'react-pose';
-// import cloudinary from 'cloudinary';
-// console.log(cloudinary)
+import content from '../services/content';
 
 const transition = {
 	duration: 300,
-	ease: [0.08, 0.69, 0.2, 0.99]
+	ease: [0.08, 0.69, 0.2, 0.99],
 };
 
 const Content = posed.div({
@@ -18,12 +17,8 @@ const Content = posed.div({
 	},
 	zoom: {
 		position: 'fixed',
-		width: ({
-			zoomedWidth
-		}) => zoomedWidth,
-		height: ({
-			zoomedHeight
-		}) => zoomedHeight,
+		width: ({ zoomedWidth }) => zoomedWidth,
+		height: ({ zoomedHeight }) => zoomedHeight,
 		top: 0,
 		left: 0,
 		right: 0,
@@ -31,65 +26,74 @@ const Content = posed.div({
 		padding: '0px 25px',
 		flip: true,
 		transition,
-	}
+	},
 });
 
-const ArtContent = ({
-	handleOnClick,
-	pose,
-	art,
-	zoomedWidth,
-	zoomedHeight,
-	isZoomed
-}) => (
-	<Content
-		onClick={handleOnClick}
-		pose={pose}
-		zoomedWidth={zoomedWidth}
-		zoomedHeight={zoomedHeight}
-		css={{
-			maxHeight: isZoomed ? '90%' : 'auto',
-			cursor: !isZoomed && 'zoom-in',
-			margin: 'auto'
-		}}
-	>
-		<div
-			css={{
-				height: !isZoomed && '100%',
-				boxShadow: '0px 0px 4px rgba(0,0,0,0.05)',
-				'&:hover': {
-					boxShadow: !isZoomed && '0px 3px 6px rgba(0,0,0,0.15)'
-				},
-				transition: 'box-shadow 0.3s ease-in-out',
-			}}
-		>
-			<img
-				src={art.image.print.full.src}
-				alt={art.title}
+class ArtContent extends Component {
+	componentDidMount() {
+		const { router } = this.props;
+		const imgIdParam = router && router.match && router.match.params && router.match.params.imgId;
+		const imgId = content.artList.some(art => art.id === imgIdParam) && imgIdParam;
+
+		if (imgId) {
+			this.props.handleOnClick({ imgId });
+		} else if (imgIdParam && !imgId) {
+			router.history.replace('/');
+		}
+	}
+
+	render() {
+		const { handleOnClick, pose, art, zoomedWidth, zoomedHeight, isActive } = this.props;
+
+		return (
+			<Content
+				onClick={handleOnClick}
+				pose={pose}
+				zoomedWidth={zoomedWidth}
+				zoomedHeight={zoomedHeight}
 				css={{
-					height: !isZoomed && '100%',
-					width: 'fit-content',
-					objectFit: isZoomed ? 'contain' : 'cover',
+					maxHeight: isActive ? '90%' : 'auto',
+					cursor: !isActive && 'zoom-in',
+					margin: 'auto',
 				}}
-			/>
-		</div>
-		{
-			isZoomed && (
+			>
 				<div
 					css={{
-						display: 'flex',
-						flexDirection: 'column',
-						alignItems: 'flex-end',
-						marginTop: '8px'
+						height: !isActive && '100%',
+						boxShadow: '0px 0px 4px rgba(0,0,0,0.05)',
+						'&:hover': {
+							boxShadow: !isActive && '0px 3px 6px rgba(0,0,0,0.15)',
+						},
+						transition: 'box-shadow 0.3s ease-in-out',
 					}}
 				>
-					<div>{art.title}</div>
-					<div>{art.height}" X {art.width}"</div>
-					<div>{art.medium} on {art.material}</div>
+					<img
+						src={art.image.print.full.src}
+						alt={art.title}
+						css={{
+							height: !isActive && '100%',
+							width: 'fit-content',
+							objectFit: isActive ? 'contain' : 'cover',
+						}}
+					/>
 				</div>
-			)
-		}
-	</Content>
-)
+				{isActive && (
+					<div
+						css={{
+							display: 'flex',
+							flexDirection: 'column',
+							alignItems: 'flex-end',
+							marginTop: '8px',
+						}}
+					>
+						<div>{art.title}</div>
+						<div>{`${art.height}" x ${art.width}"`}</div>
+						<div>{`${art.medium} on ${art.material}`}</div>
+					</div>
+				)}
+			</Content>
+		);
+	}
+}
 
 export default ArtContent;

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles'
+import styles from '../styles';
 import ScrollHide from './ScrollHide';
 import ViewToggleIcon from './ViewToggleIcon';
 
@@ -15,41 +15,44 @@ const viewToggleWrapper = {
 	zIndex: '2',
 	transition: styles.transform,
 
-	'button': {
-		padding: '0'
-	}
-}
+	button: {
+		padding: '0',
+	},
+};
 
-const ViewToggle = ({
-	isNavOpen,
-	zoomedImgId,
-	onToggleNav,
-	onToggleZoom
-}) => {
+const ViewToggle = ({ isNavOpen, activeArtId, onToggleNav, onSetActiveArt }) => {
 	const handleClick = () => {
-		if (zoomedImgId) {
-			onToggleZoom(false)
+		if (activeArtId) {
+			onSetActiveArt(undefined);
 		} else {
-			onToggleNav()
+			onToggleNav();
 		}
-	}
+	};
 
 	return (
-		<ScrollHide stopHideY={20} render={isVisible => (
-			<div css={{
-				...viewToggleWrapper,
-				transform: !isNavOpen && !zoomedImgId ?
-					`translateY(${isVisible ? '0' : 'calc(-' + viewToggleWrapper.height + ' - ' + viewToggleWrapper.top}))`
-					: undefined
-				}}>
-				<button onClick={handleClick}>
-					<ViewToggleIcon
-						isMenuIcon={!isNavOpen && !zoomedImgId}
-					/>
-				</button>
-			</div>
-		)}/>
-	)
+		<ScrollHide
+			stopHideY={20}
+			render={isVisible => (
+				<div
+					css={{
+						...viewToggleWrapper,
+						transform:
+							!isNavOpen && !activeArtId
+								? `translateY(${
+										isVisible
+											? '0'
+											: 'calc(-' + viewToggleWrapper.height + ' - ' + viewToggleWrapper.top
+								  }))`
+								: undefined,
+					}}
+				>
+					<button onClick={handleClick}>
+						<ViewToggleIcon isMenuIcon={!isNavOpen && !activeArtId} />
+					</button>
+				</div>
+			)}
+		/>
+	);
 };
 
 export default ViewToggle;

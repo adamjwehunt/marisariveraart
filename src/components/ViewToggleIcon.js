@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles'
+import styles from '../styles';
 
 const viewToggleIcon = {
 	position: 'relative',
@@ -16,14 +16,12 @@ const viewToggleIcon = {
 		transition: styles.transform,
 		borderBottomLeftRadius: '10px',
 		borderTopLeftRadius: '10px',
-	}
-}
+	},
+};
 
-const ViewToggleIcon = ({
-	isMenuIcon
-}) => {
+const ViewToggleIcon = ({ isMenuIcon }) => {
 	const translate = isMenuIcon ? '0px' : '6px';
-	const rotate = (deg) => isMenuIcon ? 'rotate(0deg)' : `rotate(${deg}deg)`;
+	const rotate = deg => (isMenuIcon ? 'rotate(0deg)' : `rotate(${deg}deg)`);
 	const offset = '10px';
 
 	return (
@@ -31,17 +29,17 @@ const ViewToggleIcon = ({
 			<span
 				css={{
 					transform: `${rotate(-45)} translateY(${translate}) translateX(-${translate})`,
-					top: offset
+					top: offset,
 				}}
 			/>
 			<span
 				css={{
 					transform: `${rotate(45)} translateY(-${translate}) translateX(-${translate})`,
-					bottom: offset
+					bottom: offset,
 				}}
 			/>
 		</div>
-	)
-}
+	);
+};
 
 export default ViewToggleIcon;

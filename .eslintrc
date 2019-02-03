@@ -1,0 +1,30 @@
+{
+	"extends": ["react-app", "prettier", "prettier/react"],
+	"plugins": ["prettier"],
+	"rules": {
+		"react/jsx-filename-extension": [
+			1,
+			{
+				"extensions": [".js", ".jsx"]
+			}
+		],
+		"prettier/prettier": [
+			"error",
+			{
+				"trailingComma": "es5",
+				"singleQuote": true,
+				"printWidth": 100,
+				"useTabs": true
+			}
+		],
+		"import/imports-first": ["error", "absolute-first"],
+		"import/newline-after-import": "error",
+		"object-property-newline": [
+			"error",
+			{
+				"allowMultiplePropertiesPerLine": false
+			}
+		]
+	},
+	"parser": "babel-eslint"
+}

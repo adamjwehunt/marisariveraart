@@ -1,35 +1,30 @@
 import React from 'react';
 import content from '../services/content';
-import Art from './Art'
+import Art from './Art';
 
 const collectionGrid = {
 	display: 'grid',
 	gridGap: '40px',
-	gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))'
+	gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
 };
 
-const Collection = ({
-	activeCollectionId,
-	onToggleZoom,
-	isNavOpen,
-	zoomedImgId
-}) => (
+const Collection = ({ activeCollectionId, onSetActiveArt, isNavOpen, activeArtId, router }) => (
 	<section>
 		<h1>{content.collection[activeCollectionId].title}</h1>
 		<div css={collectionGrid}>
-			{
-				content.artList.map((art, i) =>
-					art.collectionId === activeCollectionId ?
+			{content.artList.map(
+				art =>
+					art.collectionId === activeCollectionId && (
 						<Art
-							key={i}
+							key={art.id}
 							art={art}
-							onToggleZoom={onToggleZoom}
+							onSetActiveArt={onSetActiveArt}
 							isNavOpen={isNavOpen}
-							zoomedImgId={zoomedImgId}
+							activeArtId={activeArtId}
+							router={router}
 						/>
-					: undefined
-				)
-			}
+					)
+			)}
 		</div>
 	</section>
 );

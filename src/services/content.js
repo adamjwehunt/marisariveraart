@@ -1,8 +1,9 @@
-import testImg from '../images/7.jpg'
-import testImg5 from '../images/5.jpg'
-import testImg4 from '../images/4.jpg'
-import testImg1 from '../images/1.jpg'
-const baseImgUri = 'https://res.cloudinary.com/marisariveraart/image/upload/'
+import testImg from '../images/7.jpg';
+import testImg5 from '../images/5.jpg';
+import testImg4 from '../images/4.jpg';
+import testImg1 from '../images/1.jpg';
+
+const baseImgUri = 'https://res.cloudinary.com/marisariveraart/image/upload/';
 
 export default {
 	// about: {
@@ -92,7 +93,7 @@ export default {
 			image: {
 				thumbnailSrc: testImg4,
 			},
-		}
+		},
 	},
 	artList: [
 		{
@@ -100,7 +101,7 @@ export default {
 			collectionId: '1',
 			title: 'Warm Wishes',
 			description: '',
-			medium: 'water color',
+			medium: 'watercolor',
 			material: 'paper',
 			width: 5,
 			height: 7,
@@ -114,8 +115,8 @@ export default {
 					{
 						id: '',
 						src: '',
-					}
-				]
+					},
+				],
 			},
 			link: {
 				fb: '',
@@ -130,15 +131,15 @@ export default {
 				print: {
 					inStock: true,
 					link: '',
-				}
-			}
+				},
+			},
 		},
 		{
 			id: '2',
 			collectionId: '1',
 			title: 'Star Plant',
 			description: '',
-			medium: 'water color',
+			medium: 'watercolor',
 			material: 'paper',
 			width: 5,
 			height: 7,
@@ -152,8 +153,8 @@ export default {
 					{
 						id: '',
 						src: '',
-					}
-				]
+					},
+				],
 			},
 			link: {
 				fb: '',
@@ -168,15 +169,15 @@ export default {
 				print: {
 					inStock: true,
 					link: '',
-				}
-			}
+				},
+			},
 		},
 		{
 			id: '3',
 			collectionId: '1',
 			title: 'Night Paths',
 			description: '',
-			medium: 'water color',
+			medium: 'watercolor',
 			material: 'paper',
 			width: 5,
 			height: 7,
@@ -190,8 +191,8 @@ export default {
 					{
 						id: '',
 						src: '',
-					}
-				]
+					},
+				],
 			},
 			link: {
 				fb: '',
@@ -206,15 +207,15 @@ export default {
 				print: {
 					inStock: true,
 					link: '',
-				}
-			}
+				},
+			},
 		},
 		{
 			id: '4',
 			collectionId: '1',
 			title: 'Star Fields',
 			description: '',
-			medium: 'water color',
+			medium: 'watercolor',
 			material: 'paper',
 			width: 5,
 			height: 7,
@@ -228,8 +229,8 @@ export default {
 					{
 						id: '',
 						src: '',
-					}
-				]
+					},
+				],
 			},
 			link: {
 				fb: '',
@@ -244,15 +245,15 @@ export default {
 				print: {
 					inStock: true,
 					link: '',
-				}
-			}
+				},
+			},
 		},
 		{
 			id: '5',
 			collectionId: '1',
 			title: 'Vanilla Air',
 			description: '',
-			medium: 'water color',
+			medium: 'watercolor',
 			material: 'paper',
 			width: 5,
 			height: 7,
@@ -266,8 +267,8 @@ export default {
 					{
 						id: '',
 						src: '',
-					}
-				]
+					},
+				],
 			},
 			link: {
 				fb: '',
@@ -282,15 +283,15 @@ export default {
 				print: {
 					inStock: true,
 					link: '',
-				}
-			}
+				},
+			},
 		},
 		{
 			id: '6',
 			collectionId: '1',
 			title: 'Favorite Change',
 			description: '',
-			medium: 'water color',
+			medium: 'watercolor',
 			material: 'paper',
 			width: 5,
 			height: 7,
@@ -304,8 +305,8 @@ export default {
 					{
 						id: '',
 						src: '',
-					}
-				]
+					},
+				],
 			},
 			link: {
 				fb: '',
@@ -320,15 +321,15 @@ export default {
 				print: {
 					inStock: true,
 					link: '',
-				}
-			}
+				},
+			},
 		},
 		{
 			id: '7',
 			collectionId: '1',
 			title: 'Soft Control',
 			description: '',
-			medium: 'water color',
+			medium: 'watercolor',
 			material: 'paper',
 			width: 5,
 			height: 7,
@@ -342,8 +343,8 @@ export default {
 					{
 						id: '',
 						src: '',
-					}
-				]
+					},
+				],
 			},
 			link: {
 				fb: '',
@@ -358,15 +359,15 @@ export default {
 				print: {
 					inStock: true,
 					link: '',
-				}
-			}
+				},
+			},
 		},
 		{
 			id: '8',
 			collectionId: '1',
 			title: 'Tiny Textures',
 			description: '',
-			medium: 'water color',
+			medium: 'watercolor',
 			material: 'paper',
 			width: 5,
 			height: 7,
@@ -380,8 +381,8 @@ export default {
 					{
 						id: '',
 						src: '',
-					}
-				]
+					},
+				],
 			},
 			link: {
 				fb: '',
@@ -396,15 +397,15 @@ export default {
 				print: {
 					inStock: true,
 					link: '',
-				}
-			}
+				},
+			},
 		},
 		{
 			id: '9',
 			collectionId: '1',
 			title: 'Rose Relection',
 			description: '',
-			medium: 'water color',
+			medium: 'watercolor',
 			material: 'paper',
 			width: 5,
 			height: 7,
@@ -418,8 +419,8 @@ export default {
 					{
 						id: '',
 						src: '',
-					}
-				]
+					},
+				],
 			},
 			link: {
 				fb: '',
@@ -434,15 +435,15 @@ export default {
 				print: {
 					inStock: true,
 					link: '',
-				}
-			}
+				},
+			},
 		},
 		{
 			id: '10',
 			collectionId: '1',
 			title: 'Nature Hug',
 			description: '',
-			medium: 'water color',
+			medium: 'watercolor',
 			material: 'paper',
 			width: 5,
 			height: 7,
@@ -456,8 +457,8 @@ export default {
 					{
 						id: '',
 						src: '',
-					}
-				]
+					},
+				],
 			},
 			link: {
 				fb: '',
@@ -472,15 +473,15 @@ export default {
 				print: {
 					inStock: true,
 					link: '',
-				}
-			}
+				},
+			},
 		},
 		{
 			id: '11',
 			collectionId: '1',
 			title: 'Open Door',
 			description: '',
-			medium: 'water color',
+			medium: 'watercolor',
 			material: 'Canvas',
 			width: 5,
 			height: 7,
@@ -494,8 +495,8 @@ export default {
 					{
 						id: '',
 						src: '',
-					}
-				]
+					},
+				],
 			},
 			link: {
 				fb: '',
@@ -510,13 +511,13 @@ export default {
 				print: {
 					inStock: true,
 					link: '',
-				}
-			}
+				},
+			},
 		},
 		{
 			id: '12',
 			collectionId: '1',
-			title: 'Let\'s go',
+			title: "Let's go",
 			description: '',
 			medium: 'acrylic',
 			material: 'canvas',
@@ -532,8 +533,8 @@ export default {
 					{
 						id: '',
 						src: '',
-					}
-				]
+					},
+				],
 			},
 			link: {
 				fb: '',
@@ -548,15 +549,15 @@ export default {
 				print: {
 					inStock: true,
 					link: '',
-				}
-			}
+				},
+			},
 		},
 		{
 			id: '13',
 			collectionId: '1',
 			title: 'Give',
 			description: '',
-			medium: 'water color',
+			medium: 'watercolor',
 			material: 'paper',
 			width: 5,
 			height: 7,
@@ -570,8 +571,8 @@ export default {
 					{
 						id: '',
 						src: '',
-					}
-				]
+					},
+				],
 			},
 			link: {
 				fb: '',
@@ -586,15 +587,15 @@ export default {
 				print: {
 					inStock: true,
 					link: '',
-				}
-			}
+				},
+			},
 		},
 		{
 			id: '14',
 			collectionId: '1',
 			title: 'Float In',
 			description: '',
-			medium: 'water color',
+			medium: 'watercolor',
 			material: 'paper',
 			width: 5,
 			height: 7,
@@ -608,8 +609,8 @@ export default {
 					{
 						id: '',
 						src: '',
-					}
-				]
+					},
+				],
 			},
 			link: {
 				fb: '',
@@ -624,15 +625,15 @@ export default {
 				print: {
 					inStock: true,
 					link: '',
-				}
-			}
+				},
+			},
 		},
 		{
 			id: '15',
 			collectionId: '1',
 			title: 'Float Away',
 			description: '',
-			medium: 'water color',
+			medium: 'watercolor',
 			material: 'paper',
 			width: 5,
 			height: 7,
@@ -646,8 +647,8 @@ export default {
 					{
 						id: '',
 						src: '',
-					}
-				]
+					},
+				],
 			},
 			link: {
 				fb: '',
@@ -662,15 +663,15 @@ export default {
 				print: {
 					inStock: true,
 					link: '',
-				}
-			}
+				},
+			},
 		},
 		{
 			id: '16',
 			collectionId: '1',
 			title: 'Favorite Change',
 			description: '',
-			medium: 'water color',
+			medium: 'watercolor',
 			material: 'paper',
 			width: 5,
 			height: 7,
@@ -684,8 +685,8 @@ export default {
 					{
 						id: '',
 						src: '',
-					}
-				]
+					},
+				],
 			},
 			link: {
 				fb: '',
@@ -700,15 +701,15 @@ export default {
 				print: {
 					inStock: true,
 					link: '',
-				}
-			}
+				},
+			},
 		},
 		{
 			id: '17',
 			collectionId: '1',
 			title: 'Bright Fade',
 			description: '',
-			medium: 'water color',
+			medium: 'watercolor',
 			material: 'paper',
 			width: 5,
 			height: 7,
@@ -722,8 +723,8 @@ export default {
 					{
 						id: '',
 						src: '',
-					}
-				]
+					},
+				],
 			},
 			link: {
 				fb: '',
@@ -738,15 +739,15 @@ export default {
 				print: {
 					inStock: true,
 					link: '',
-				}
-			}
+				},
+			},
 		},
 		{
 			id: '18',
 			collectionId: '1',
 			title: 'Athens Stardust',
 			description: '',
-			medium: 'water color',
+			medium: 'watercolor',
 			material: 'paper',
 			width: 5,
 			height: 7,
@@ -760,8 +761,8 @@ export default {
 					{
 						id: '',
 						src: '',
-					}
-				]
+					},
+				],
 			},
 			link: {
 				fb: '',
@@ -776,8 +777,8 @@ export default {
 				print: {
 					inStock: true,
 					link: '',
-				}
-			}
+				},
+			},
 		},
 		{
 			id: '19',
@@ -798,8 +799,8 @@ export default {
 					{
 						id: '',
 						src: '',
-					}
-				]
+					},
+				],
 			},
 			link: {
 				fb: '',
@@ -814,8 +815,8 @@ export default {
 				print: {
 					inStock: true,
 					link: '',
-				}
-			}
+				},
+			},
 		},
 		{
 			id: '20',
@@ -836,8 +837,8 @@ export default {
 					{
 						id: '',
 						src: '',
-					}
-				]
+					},
+				],
 			},
 			link: {
 				fb: '',
@@ -852,8 +853,8 @@ export default {
 				print: {
 					inStock: true,
 					link: '',
-				}
-			}
+				},
+			},
 		},
 		{
 			id: '21',
@@ -874,8 +875,8 @@ export default {
 					{
 						id: '',
 						src: '',
-					}
-				]
+					},
+				],
 			},
 			link: {
 				fb: '',
@@ -890,8 +891,8 @@ export default {
 				print: {
 					inStock: true,
 					link: '',
-				}
-			}
+				},
+			},
 		},
 		{
 			id: '22',
@@ -912,8 +913,8 @@ export default {
 					{
 						id: '',
 						src: '',
-					}
-				]
+					},
+				],
 			},
 			link: {
 				fb: '',
@@ -928,8 +929,8 @@ export default {
 				print: {
 					inStock: true,
 					link: '',
-				}
-			}
+				},
+			},
 		},
 		{
 			id: '23',
@@ -950,8 +951,8 @@ export default {
 					{
 						id: '',
 						src: '',
-					}
-				]
+					},
+				],
 			},
 			link: {
 				fb: '',
@@ -966,8 +967,8 @@ export default {
 				print: {
 					inStock: true,
 					link: '',
-				}
-			}
+				},
+			},
 		},
 		{
 			id: '24',
@@ -988,8 +989,8 @@ export default {
 					{
 						id: '',
 						src: '',
-					}
-				]
+					},
+				],
 			},
 			link: {
 				fb: '',
@@ -1004,8 +1005,8 @@ export default {
 				print: {
 					inStock: true,
 					link: '',
-				}
-			}
+				},
+			},
 		},
 		{
 			id: '25',
@@ -1026,8 +1027,8 @@ export default {
 					{
 						id: '',
 						src: '',
-					}
-				]
+					},
+				],
 			},
 			link: {
 				fb: '',
@@ -1042,8 +1043,8 @@ export default {
 				print: {
 					inStock: true,
 					link: '',
-				}
-			}
+				},
+			},
 		},
 		{
 			id: '26',
@@ -1064,8 +1065,8 @@ export default {
 					{
 						id: '',
 						src: '',
-					}
-				]
+					},
+				],
 			},
 			link: {
 				fb: '',
@@ -1080,8 +1081,8 @@ export default {
 				print: {
 					inStock: true,
 					link: '',
-				}
-			}
+				},
+			},
 		},
 		{
 			id: '27',
@@ -1102,8 +1103,8 @@ export default {
 					{
 						id: '',
 						src: '',
-					}
-				]
+					},
+				],
 			},
 			link: {
 				fb: '',
@@ -1118,8 +1119,8 @@ export default {
 				print: {
 					inStock: true,
 					link: '',
-				}
-			}
+				},
+			},
 		},
-	]
-}
+	],
+};

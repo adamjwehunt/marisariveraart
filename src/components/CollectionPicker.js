@@ -1,6 +1,6 @@
 import React from 'react';
-import content from '../services/content';
 import posed from 'react-pose';
+import content from '../services/content';
 
 const collectionPicker = {
 	display: 'grid',
@@ -20,8 +20,8 @@ const collectionTitleWrapper = {
 	justifyContent: 'center',
 	alignItems: 'center',
 	color: 'white',
-	cursor: 'pointer'
-}
+	cursor: 'pointer',
+};
 
 const collectionImage = {
 	objectFit: 'cover',
@@ -33,46 +33,40 @@ const Box = posed.div({
 	hoverable: true,
 	pressable: true,
 	init: {
-		boxShadow: '0px 0px 0px rgba(0,0,0,0)'
+		boxShadow: '0px 0px 0px rgba(0,0,0,0)',
 	},
 	hover: {
-		boxShadow: '0px 2px 4px rgba(0,0,0,0.2)'
+		boxShadow: '0px 2px 4px rgba(0,0,0,0.2)',
 	},
 	press: {
-		boxShadow: '0px 1px 2px rgba(0,0,0,0.1)'
-	}
+		boxShadow: '0px 1px 2px rgba(0,0,0,0.1)',
+	},
 });
 
-const CollectionPicker = ({
-	collectionChange
-}) => {
+const CollectionPicker = ({ onCollectionChange }) => {
 	const collection = content.collection;
 
 	return (
 		<nav css={collectionPicker}>
-				{
-					Object.keys(collection).map(key =>
-						<div
-							key={key}
-						>
-							<Box
-								css={{position: 'relative'}}
-								onClick={() => collectionChange(key)}
-							>
-								<img
-									src={collection[key].image.thumbnailSrc}
-									alt={collection[key].image.thumbnailSrc}
-									css={collectionImage}
-								/>
-								<div css={collectionTitleWrapper}>
-									{collection[key].title}
-								</div>
-							</Box>
-						</div>
-					)
-				}
+			{Object.keys(collection).map(key => (
+				<div key={key}>
+					<Box
+						css={{
+							position: 'relative',
+						}}
+						onClick={() => onCollectionChange(key)}
+					>
+						<img
+							src={collection[key].image.thumbnailSrc}
+							alt={collection[key].image.thumbnailSrc}
+							css={collectionImage}
+						/>
+						<div css={collectionTitleWrapper}>{collection[key].title}</div>
+					</Box>
+				</div>
+			))}
 		</nav>
 	);
-}
+};
 
 export default CollectionPicker;

@@ -1,23 +1,23 @@
 import React from 'react';
-import styles from '../styles'
+import styles from '../styles';
 
 const directionToggleRight = {
 	position: 'relative',
-  height: '52px',
-  width: '52px',
+	height: '52px',
+	width: '52px',
 	cursor: 'pointer',
 
 	span: {
 		position: 'absolute',
 		display: 'block',
-    width: '30px',
+		width: '30px',
 		height: '6px',
 		background: '#666',
 		transition: styles.transform,
 		borderBottomRightRadius: '10px',
 		borderTopRightRadius: '10px',
-	}
-}
+	},
+};
 
 const DirectionToggleRight = () => {
 	const offset = '12px';
@@ -33,11 +33,11 @@ const DirectionToggleRight = () => {
 			<span
 				css={{
 					transform: 'rotate(45deg) translateY(-8px) translateX(4px)',
-					bottom: offset
+					bottom: offset,
 				}}
 			/>
 		</div>
-	)
-}
+	);
+};
 
 export default DirectionToggleRight;

@@ -10,32 +10,21 @@ const frame = {
 	display: 'none',
 	background: 'white',
 	transform: 'translateZ(0)',
-}
+};
 
 const Frame = posed.div({
 	init: {
-		applyAtEnd: {
-			display: 'none'
-		},
-		opacity: 0
+		applyAtEnd: { display: 'none' },
+		opacity: 0,
 	},
 	zoom: {
-		applyAtStart: {
-			display: 'block'
-		},
-		opacity: 1
-	}
+		applyAtStart: { display: 'block' },
+		opacity: 1,
+	},
 });
 
-const ArtBackground = ({
-	pose,
-	handleOnClick
-}) => (
-	<Frame
-		onClick={handleOnClick}
-		pose={pose}
-		css={frame}
-	/>
-)
+const ArtBackground = ({ pose, handleOnClick }) => (
+	<Frame onClick={handleOnClick} pose={pose} css={frame} />
+);
 
 export default ArtBackground;

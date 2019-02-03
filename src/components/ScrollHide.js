@@ -10,9 +10,9 @@ class ScrollHide extends Component {
 	componentWillMount() {
 		window.addEventListener('scroll', this.handleScroll);
 
-		const { startShowY } = this.props
+		const { startShowY } = this.props;
 		if (startShowY && startShowY > window.scrollY) {
-			this.setState({ isVisible: false })
+			this.setState({ isVisible: false });
 		}
 	}
 
@@ -28,16 +28,12 @@ class ScrollHide extends Component {
 		const tolerance = 4;
 
 		if (
-			(pageY > 0 && pageY > (lastScrollTop + tolerance) && stopHideY < pageY) ||
+			(pageY > 0 && pageY > lastScrollTop + tolerance && stopHideY < pageY) ||
 			(startShowY > pageY && pageY >= 0)
 		) {
-			this.setState({
-				isVisible: false
-			})
+			this.setState({ isVisible: false });
 		} else if (startShowY <= pageY && (pageY < lastScrollTop || pageY <= 0)) {
-			this.setState({
-				isVisible: true
-			})
+			this.setState({ isVisible: true });
 		}
 
 		this.setState({
@@ -50,17 +46,13 @@ class ScrollHide extends Component {
 		if (this.state.hasScrolled) {
 			window.requestAnimationFrame(this.checkY);
 		} else {
-			this.setState({ hasScrolled: true })
+			this.setState({ hasScrolled: true });
 			window.requestAnimationFrame(this.handleScroll);
 		}
 	};
 
 	render() {
-		return (
-			<Fragment>
-				{this.props.render(this.state.isVisible)}
-			</Fragment>
-		)
+		return <Fragment>{this.props.render(this.state.isVisible)}</Fragment>;
 	}
 }
 
