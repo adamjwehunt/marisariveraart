@@ -498,7 +498,7 @@ export default {
 			title: 'Open Door',
 			description: '',
 			medium: 'watercolor',
-			material: 'Canvas',
+			material: 'canvas',
 			width: 5,
 			height: 7,
 			image: {

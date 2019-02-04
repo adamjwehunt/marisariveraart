@@ -55,19 +55,28 @@ const Splash = () => (
 			}}
 		>
 			<a
-				css={{ width: '100%', cursor: 'pointer' }}
+				css={{
+					width: '100%',
+					cursor: 'pointer',
+				}}
 				href="mailto:marisa@marisariveraart.com"
 			>
 				<img css={socialLinkIcon} src={emailIcon} alt="" />
 			</a>
 			<a
-				css={{ width: '100%', cursor: 'pointer' }}
+				css={{
+					width: '100%',
+					cursor: 'pointer',
+				}}
 				href="https://www.instagram.com/marisariveraart/"
 				target="_blank"
 				rel="noopener noreferrer"
 			>
 				<img
-					css={{ ...socialLinkIcon, padding: '12px 0' }}
+					css={{
+						...socialLinkIcon,
+						padding: '12px 0',
+					}}
 					src={instaIcon}
 					alt=""
 				/>

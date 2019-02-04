@@ -2,6 +2,7 @@ import React from 'react';
 import Rect from '@reach/rect';
 import ArtBackground from './ArtBackground';
 import ArtImg from './ArtImg';
+import ArtDetails from './ArtDetails';
 
 let lastScrollTop = 0;
 let hasScrolled = false;
@@ -43,7 +44,7 @@ const handleScroll = () => {
 
 const Art = ({ art, isNavOpen, activeArtId, onSetActiveArt, router }) => {
 	const isActive = activeArtId === art.id;
-	const pose = isActive ? 'zoom' : 'init';
+	const pose = isActive ? 'active' : 'init';
 	setActiveArt = onSetActiveArt;
 	routerObj = router;
 
@@ -85,6 +86,7 @@ const Art = ({ art, isNavOpen, activeArtId, onSetActiveArt, router }) => {
 							isActive={isActive}
 							router={router}
 						/>
+						<ArtDetails pose={pose} art={art} artImgWidth={activeWidth} />
 					</div>
 				);
 			}}

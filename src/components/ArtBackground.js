@@ -8,7 +8,8 @@ const frame = {
 	right: '0',
 	bottom: '0',
 	display: 'none',
-	background: 'white',
+	background:
+		'radial-gradient(circle, rgba(242,242,242,1) 0%, rgba(255,255,255,1) 55%, rgba(255,255,255,1) 100%)',
 	transform: 'translateZ(0)',
 };
 
@@ -17,7 +18,7 @@ const Frame = posed.div({
 		applyAtEnd: { display: 'none' },
 		opacity: 0,
 	},
-	zoom: {
+	active: {
 		applyAtStart: { display: 'block' },
 		opacity: 1,
 	},

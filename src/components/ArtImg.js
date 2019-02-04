@@ -19,7 +19,7 @@ const ImgWrapper = posed.div({
 		transition,
 		flip: true,
 	},
-	zoom: {
+	active: {
 		position: 'fixed',
 		height: ({ activeHeight }) => activeHeight,
 		width: ({ activeWidth }) => activeWidth,
@@ -41,11 +41,12 @@ const Img = ({ src, alt, isActive }) => (
 			width: isActive ? 'auto' : 'fit-content',
 			objectFit: isActive ? 'contain' : 'cover',
 			cursor: !isActive && 'zoom-in',
-			boxShadow: '0px 0px 4px rgba(0,0,0,0.05)',
+			boxShadow: !isActive && '0px 0px 4px rgba(0,0,0,0.1)',
 			'&:hover': {
-				boxShadow: !isActive && '0px 3px 6px rgba(0,0,0,0.15)',
+				boxShadow: !isActive && '0px 3px 6px rgba(0,0,0,0.17)',
 			},
 			transition: 'box-shadow 0.3s ease-in-out',
+			// filter: isActive && 'drop-shadow(0px 0px 4px rgba(0,0,0,0.1))',
 		}}
 	/>
 );
@@ -62,7 +63,7 @@ class ArtImg extends Component {
 			content.artList.some(art => art.id === imgIdParam) && imgIdParam;
 
 		if (imgId) {
-			this.props.handleOnClick({ imgId });
+			setTimeout(() => this.props.handleOnClick({ imgId }), 300);
 		} else if (imgIdParam && !imgId) {
 			router.history.replace('/');
 		}
