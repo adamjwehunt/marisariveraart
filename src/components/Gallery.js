@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
-import Collection from './Collection';
 import CollectionPicker from './CollectionPicker';
+import Collection from './Collection';
+import ArtBackground from './ArtBackground';
 import content from '../services/content';
 
 // import DirectionToggles from './DirectionToggles';
@@ -51,6 +52,10 @@ class Gallery extends Component {
 					isNavOpen={isNavOpen}
 					activeArtId={activeArtId}
 					router={router}
+				/>
+				<ArtBackground
+					handleOnClick={() => activeArtId && onSetActiveArt('', router)}
+					pose={activeArtId ? 'active' : 'init'}
 				/>
 				{/* <DirectionToggles
 						onSetActiveArt={onSetActiveArt}

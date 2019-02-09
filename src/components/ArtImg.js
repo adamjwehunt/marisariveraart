@@ -29,6 +29,7 @@ const ImgWrapper = posed.div({
 		bottom: 0,
 		flip: true,
 		transition,
+		applyAtStart: { zIndex: '2' },
 	},
 });
 
@@ -46,7 +47,6 @@ const Img = ({ src, alt, isActive }) => (
 				boxShadow: !isActive && '0px 3px 6px rgba(0,0,0,0.17)',
 			},
 			transition: 'box-shadow 0.3s ease-in-out',
-			// filter: isActive && 'drop-shadow(0px 0px 4px rgba(0,0,0,0.1))',
 		}}
 	/>
 );

@@ -1,8 +1,3 @@
-import testImg from '../images/7.jpg';
-import testImg5 from '../images/5.jpg';
-import testImg4 from '../images/4.jpg';
-import testImg1 from '../images/1.jpg';
-
 const baseImgUri = 'https://res.cloudinary.com/marisariveraart/image/upload/';
 
 export default {
@@ -79,21 +74,25 @@ export default {
 			title: 'Autumn Hour',
 			description: 'This is where i put my crazy stuff',
 			image: {
-				thumbnailSrc: testImg4,
+				thumbnailSrc:
+					baseImgUri +
+					'v1548636157/Delicate%20Dust/Warm-Wishes-ORIGINAL-SCAN.jpg',
 			},
 		},
 		3: {
 			title: 'Blood bathes',
 			description: 'Warm, salty blood to make us feel at home',
 			image: {
-				thumbnailSrc: testImg,
+				thumbnailSrc: baseImgUri + 'v1548636136/Delicate%20Dust/Nature-Hug.jpg',
 			},
 		},
 		4: {
 			title: 'Desert lavender',
 			description: 'Just get the hint already bucko',
 			image: {
-				thumbnailSrc: testImg4,
+				thumbnailSrc:
+					baseImgUri +
+					'v1548636157/Delicate%20Dust/Warm-Wishes-ORIGINAL-SCAN.jpg',
 			},
 		},
 	},
@@ -819,7 +818,7 @@ export default {
 			image: {
 				print: {
 					full: {
-						src: testImg,
+						src: baseImgUri + 'v1548636136/Delicate%20Dust/Nature-Hug.jpg',
 					},
 				},
 				photo: [
@@ -857,7 +856,9 @@ export default {
 			image: {
 				print: {
 					full: {
-						src: testImg5,
+						src:
+							baseImgUri +
+							'v1548636139/Delicate%20Dust/Night-Paths-_ORIGINAL-SCAN.jpg',
 					},
 				},
 				photo: [
@@ -895,7 +896,7 @@ export default {
 			image: {
 				print: {
 					full: {
-						src: testImg,
+						src: baseImgUri + 'v1548636136/Delicate%20Dust/Nature-Hug.jpg',
 					},
 				},
 				photo: [
@@ -933,7 +934,7 @@ export default {
 			image: {
 				print: {
 					full: {
-						src: testImg1,
+						src: baseImgUri + 'v1548636136/Delicate%20Dust/Nature-Hug.jpg',
 					},
 				},
 				photo: [
@@ -971,7 +972,9 @@ export default {
 			image: {
 				print: {
 					full: {
-						src: testImg4,
+						src:
+							baseImgUri +
+							'v1548636157/Delicate%20Dust/Warm-Wishes-ORIGINAL-SCAN.jpg',
 					},
 				},
 				photo: [
@@ -1009,7 +1012,9 @@ export default {
 			image: {
 				print: {
 					full: {
-						src: testImg5,
+						src:
+							baseImgUri +
+							'v1548636139/Delicate%20Dust/Night-Paths-_ORIGINAL-SCAN.jpg',
 					},
 				},
 				photo: [
@@ -1047,7 +1052,9 @@ export default {
 			image: {
 				print: {
 					full: {
-						src: testImg4,
+						src:
+							baseImgUri +
+							'v1548636157/Delicate%20Dust/Warm-Wishes-ORIGINAL-SCAN.jpg',
 					},
 				},
 				photo: [
@@ -1085,7 +1092,7 @@ export default {
 			image: {
 				print: {
 					full: {
-						src: testImg,
+						src: baseImgUri + 'v1548636136/Delicate%20Dust/Nature-Hug.jpg',
 					},
 				},
 				photo: [
@@ -1123,7 +1130,7 @@ export default {
 			image: {
 				print: {
 					full: {
-						src: testImg,
+						src: baseImgUri + 'v1548636136/Delicate%20Dust/Nature-Hug.jpg',
 					},
 				},
 				photo: [

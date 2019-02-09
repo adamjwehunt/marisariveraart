@@ -24,6 +24,7 @@ const DetailsBar = posed.div({
 		height: '10vh',
 		fontSize: '10vh',
 		opacity: 1,
+		applyAtStart: { zIndex: '2' },
 	},
 });
 

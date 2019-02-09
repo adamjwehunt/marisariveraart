@@ -24,7 +24,7 @@ const Collection = ({
 						<Art
 							key={art.id}
 							art={art}
-							onSetActiveArt={onSetActiveArt}
+							setActiveArt={onSetActiveArt}
 							isNavOpen={isNavOpen}
 							activeArtId={activeArtId}
 							router={router}
