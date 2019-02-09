@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import CollectionPicker from './CollectionPicker';
 import Collection from './Collection';
 import ArtBackground from './ArtBackground';
+import scrollUtility from '../utilities/scrollUtility';
 import content from '../services/content';
 
 // import DirectionToggles from './DirectionToggles';
@@ -12,25 +13,22 @@ class Gallery extends Component {
 	};
 
 	static getDerivedStateFromProps(props) {
-		const router = props.router;
-		if (router) {
-			let activeCollectionId = '1';
-			const imgIdParam =
-				router &&
-				router.match &&
-				router.match.params &&
-				router.match.params.imgId;
-			const imgId =
-				content.artList.some(art => art.id === imgIdParam) && imgIdParam;
+		const { router, onSetActiveArt } = props;
+		let imgIdParam =
+			router &&
+			router.match &&
+			router.match.params &&
+			router.match.params.imgId;
+		imgIdParam =
+			content.artList.some(art => art.id === imgIdParam) && imgIdParam;
 
-			if (imgId) {
-				activeCollectionId = content.artList.find(art => art.id === imgId)
-					.collectionId;
+		if (imgIdParam) {
+			scrollUtility.startScrollListener(4, () => onSetActiveArt('', router));
 
-				return {
-					activeCollectionId,
-				};
-			}
+			return {
+				activeCollectionId: content.artList.find(art => art.id === imgIdParam)
+					.collectionId,
+			};
 		}
 		return null;
 	}
@@ -55,7 +53,7 @@ class Gallery extends Component {
 				/>
 				<ArtBackground
 					handleOnClick={() => activeArtId && onSetActiveArt('', router)}
-					pose={activeArtId ? 'active' : 'init'}
+					activeArtId={activeArtId}
 				/>
 				{/* <DirectionToggles
 						onSetActiveArt={onSetActiveArt}

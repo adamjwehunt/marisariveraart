@@ -24,8 +24,12 @@ const Frame = posed.div({
 	},
 });
 
-const ArtBackground = ({ pose, handleOnClick }) => (
-	<Frame onClick={handleOnClick} pose={pose} css={frame} />
+const ArtBackground = ({ activeArtId, handleOnClick }) => (
+	<Frame
+		onClick={handleOnClick}
+		pose={activeArtId ? 'active' : 'init'}
+		css={frame}
+	/>
 );
 
 export default ArtBackground;
