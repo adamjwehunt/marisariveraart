@@ -43,6 +43,7 @@ const ArtDetails = ({ pose, art, artImgWidth }) => (
 					flexDirection: 'row',
 					justifyContent: 'space-between',
 					padding: '.1em 0 .2em',
+					maxWidth: '90vw',
 				}}
 			>
 				<div

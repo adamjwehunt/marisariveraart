@@ -9,7 +9,7 @@ const frame = {
 	bottom: '0',
 	display: 'none',
 	background:
-		'radial-gradient(circle, rgba(242,242,242,1) 0%, rgba(255,255,255,1) 55%, rgba(255,255,255,1) 100%)',
+		'radial-gradient(circle, rgba(228,228,228,1) 10%, rgba(254,254,254,1) 75%, rgba(255,255,255,1) 100%)',
 	transform: 'translateZ(0)',
 };
 

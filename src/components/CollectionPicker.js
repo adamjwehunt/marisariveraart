@@ -1,5 +1,6 @@
 import React from 'react';
 import posed from 'react-pose';
+import PreloadImg from './PreloadImg';
 import content from '../services/content';
 
 const collectionPicker = {
@@ -48,23 +49,28 @@ const CollectionPicker = ({ onCollectionChange }) => {
 
 	return (
 		<nav css={collectionPicker}>
-			{Object.keys(collection).map(key => (
-				<div key={key}>
-					<Box
-						css={{
-							position: 'relative',
-						}}
-						onClick={() => onCollectionChange(key)}
-					>
-						<img
-							src={collection[key].image.thumbnailSrc}
-							alt={collection[key].image.thumbnailSrc}
-							css={collectionImage}
-						/>
-						<div css={collectionTitleWrapper}>{collection[key].title}</div>
-					</Box>
-				</div>
-			))}
+			{Object.keys(collection).map(key => {
+				const thumbnail = collection[key].image.thumbnail;
+
+				return (
+					<div key={key}>
+						<Box
+							css={{
+								position: 'relative',
+							}}
+							onClick={() => onCollectionChange(key)}
+						>
+							<PreloadImg
+								src={thumbnail.src}
+								preloadSrc={thumbnail.preloadSrc}
+								alt={collection[key].image.title}
+								cssProps={collectionImage}
+							/>
+							<div css={collectionTitleWrapper}>{collection[key].title}</div>
+						</Box>
+					</div>
+				);
+			})}
 		</nav>
 	);
 };

@@ -65,34 +65,56 @@ export default {
 			title: 'Delicate Dusk',
 			description: 'Stuff that makes me anna love allover.',
 			image: {
-				thumbnailSrc:
-					baseImgUri +
-					'v1548636157/Delicate%20Dust/Warm-Wishes-ORIGINAL-SCAN.jpg',
+				thumbnail: {
+					src:
+						baseImgUri +
+						'v1548636157/Delicate%20Dust/Warm-Wishes-ORIGINAL-SCAN.jpg',
+					preloadSrc:
+						baseImgUri +
+						'v1549747231/Delicate%20Dust/Warm-Wishes-PRELOAD-THUMBNAIL.jpg',
+				},
 			},
 		},
 		2: {
 			title: 'Autumn Hour',
 			description: 'This is where i put my crazy stuff',
 			image: {
-				thumbnailSrc:
-					baseImgUri +
-					'v1548636157/Delicate%20Dust/Warm-Wishes-ORIGINAL-SCAN.jpg',
+				thumbnail: {
+					src:
+						baseImgUri +
+						'v1548636157/Delicate%20Dust/Warm-Wishes-ORIGINAL-SCAN.jpg',
+					preloadSrc:
+						baseImgUri +
+						'v1549747231/Delicate%20Dust/Warm-Wishes-PRELOAD-THUMBNAIL.jpg',
+				},
 			},
 		},
 		3: {
 			title: 'Blood bathes',
 			description: 'Warm, salty blood to make us feel at home',
 			image: {
-				thumbnailSrc: baseImgUri + 'v1548636136/Delicate%20Dust/Nature-Hug.jpg',
+				thumbnail: {
+					src:
+						baseImgUri +
+						'v1548636157/Delicate%20Dust/Warm-Wishes-ORIGINAL-SCAN.jpg',
+					preloadSrc:
+						baseImgUri +
+						'v1549747231/Delicate%20Dust/Warm-Wishes-PRELOAD-THUMBNAIL.jpg',
+				},
 			},
 		},
 		4: {
 			title: 'Desert lavender',
 			description: 'Just get the hint already bucko',
 			image: {
-				thumbnailSrc:
-					baseImgUri +
-					'v1548636157/Delicate%20Dust/Warm-Wishes-ORIGINAL-SCAN.jpg',
+				thumbnail: {
+					src:
+						baseImgUri +
+						'v1548636157/Delicate%20Dust/Warm-Wishes-ORIGINAL-SCAN.jpg',
+					preloadSrc:
+						baseImgUri +
+						'v1549747231/Delicate%20Dust/Warm-Wishes-PRELOAD-THUMBNAIL.jpg',
+				},
 			},
 		},
 	},
@@ -112,6 +134,9 @@ export default {
 						src:
 							baseImgUri +
 							'v1548636157/Delicate%20Dust/Warm-Wishes-ORIGINAL-SCAN.jpg',
+						preloadSrc:
+							baseImgUri +
+							'v1549736234/Delicate%20Dust/Warm-Wishes-PRELOAD-SCAN.jpg',
 					},
 				},
 				photo: [
@@ -150,6 +175,9 @@ export default {
 				print: {
 					full: {
 						src: baseImgUri + 'v1548636151/Delicate%20Dust/Star-Plant.jpg',
+						preloadSrc:
+							baseImgUri +
+							'v1549743274/Delicate%20Dust/Star-Plant-PRELOAD-SCAN.jpg',
 					},
 				},
 				photo: [
@@ -190,6 +218,9 @@ export default {
 						src:
 							baseImgUri +
 							'v1548636139/Delicate%20Dust/Night-Paths-_ORIGINAL-SCAN.jpg',
+						preloadSrc:
+							baseImgUri +
+							'v1549743273/Delicate%20Dust/Night-Paths-PRELOAD-SCAN.jpg',
 					},
 				},
 				photo: [
@@ -230,6 +261,9 @@ export default {
 						src:
 							baseImgUri +
 							'v1548636150/Delicate%20Dust/Star-Fields-ORIGINAL-SCAN.jpg',
+						preloadSrc:
+							baseImgUri +
+							'v1549743273/Delicate%20Dust/Star-Fields-PRELOAD-SCAN.jpg',
 					},
 				},
 				photo: [
@@ -270,6 +304,9 @@ export default {
 						src:
 							baseImgUri +
 							'v1548636155/Delicate%20Dust/Vanilla-Air-ORIGINAL-SCAN.jpg',
+						preloadSrc:
+							baseImgUri +
+							'v1549743274/Delicate%20Dust/Vanilla-Air-PRELOAD-SCAN.jpg',
 					},
 				},
 				photo: [
@@ -310,6 +347,9 @@ export default {
 						src:
 							baseImgUri +
 							'v1548636127/Delicate%20Dust/Favorite-Change-_ORIGINAL-SCAN.jpg',
+						preloadSrc:
+							baseImgUri +
+							'v1549743274/Delicate%20Dust/Favorite-Change-PRELOAD-SCAN.jpg',
 					},
 				},
 				photo: [
@@ -350,6 +390,9 @@ export default {
 						src:
 							baseImgUri +
 							'v1548636147/Delicate%20Dust/Soft-Control-ORIGINAL-SCAN.jpg',
+						preloadSrc:
+							baseImgUri +
+							'v1549743273/Delicate%20Dust/Soft-Control-PRELOAD-SCAN.jpg',
 					},
 				},
 				photo: [
@@ -390,6 +433,9 @@ export default {
 						src:
 							baseImgUri +
 							'v1548636153/Delicate%20Dust/Tiny-Textures-ORIGINAL-SCAN.jpg',
+						preloadSrc:
+							baseImgUri +
+							'v1549743273/Delicate%20Dust/Tiny-Textures-PRELOAD-SCAN.jpg',
 					},
 				},
 				photo: [
@@ -428,6 +474,9 @@ export default {
 				print: {
 					full: {
 						src: baseImgUri + 'v1548636146/Delicate%20Dust/Rose-Reflection.jpg',
+						preloadSrc:
+							baseImgUri +
+							'v1549743273/Delicate%20Dust/Rose-Reflection-PRELOAD-SCAN.jpg',
 					},
 				},
 				photo: [
@@ -466,6 +515,9 @@ export default {
 				print: {
 					full: {
 						src: baseImgUri + 'v1548636136/Delicate%20Dust/Nature-Hug.jpg',
+						preloadSrc:
+							baseImgUri +
+							'v1549743273/Delicate%20Dust/Nature-Hug-PRELOAD-SCAN.jpg',
 					},
 				},
 				photo: [
@@ -504,6 +556,9 @@ export default {
 				print: {
 					full: {
 						src: baseImgUri + 'v1548636140/Delicate%20Dust/Open-Door.jpg',
+						preloadSrc:
+							baseImgUri +
+							'v1549743272/Delicate%20Dust/Open-Door-PRELOAD-SCAN.jpg',
 					},
 				},
 				photo: [
@@ -542,6 +597,9 @@ export default {
 				print: {
 					full: {
 						src: baseImgUri + 'v1548636135/Delicate%20Dust/Let_s-Go.jpg',
+						preloadSrc:
+							baseImgUri +
+							'v1549743273/Delicate%20Dust/Let_s-Go-PRELOAD-SCAN.jpg',
 					},
 				},
 				photo: [
@@ -581,6 +639,8 @@ export default {
 					full: {
 						src:
 							baseImgUri + 'v1548636133/Delicate%20Dust/Give-ORIGINAL-SCAN.jpg',
+						preloadSrc:
+							baseImgUri + 'v1549743273/Delicate%20Dust/Give-PRELOAD-SCAN.jpg',
 					},
 				},
 				photo: [
@@ -621,6 +681,9 @@ export default {
 						src:
 							baseImgUri +
 							'v1548636131/Delicate%20Dust/Float-In-_ORIGINAL-SCAN.jpg',
+						preloadSrc:
+							baseImgUri +
+							'v1549743272/Delicate%20Dust/Float-In-PRELOAD-SCAN.jpg',
 					},
 				},
 				photo: [
@@ -661,6 +724,9 @@ export default {
 						src:
 							baseImgUri +
 							'v1548636128/Delicate%20Dust/Float-Away-_ORIGINAL-SCAN.jpg',
+						preloadSrc:
+							baseImgUri +
+							'v1549743274/Delicate%20Dust/Float-Away-PRELOAD-SCAN.jpg',
 					},
 				},
 				photo: [
@@ -701,6 +767,9 @@ export default {
 						src:
 							baseImgUri +
 							'v1548636127/Delicate%20Dust/Favorite-Change-_ORIGINAL-SCAN.jpg',
+						preloadSrc:
+							baseImgUri +
+							'v1549743274/Delicate%20Dust/Favorite-Change-PRELOAD-SCAN.jpg',
 					},
 				},
 				photo: [
@@ -741,6 +810,9 @@ export default {
 						src:
 							baseImgUri +
 							'v1548636124/Delicate%20Dust/Bright-Fade-_ORIGINAL-SCAN.jpg',
+						preloadSrc:
+							baseImgUri +
+							'v1549743273/Delicate%20Dust/Bright-Fade-PRELOAD-SCAN.jpg',
 					},
 				},
 				photo: [
@@ -781,6 +853,9 @@ export default {
 						src:
 							baseImgUri +
 							'v1548636123/Delicate%20Dust/Athens-Stardust-ORIGINAL-SCAN.jpg',
+						preloadSrc:
+							baseImgUri +
+							'v1549743273/Delicate%20Dust/Athens-Stardust-PRELOAD-SCAN.jpg',
 					},
 				},
 				photo: [
@@ -808,17 +883,22 @@ export default {
 		},
 		{
 			id: '19',
-			collectionId: '3',
-			title: 'Willow',
+			collectionId: '1',
+			title: 'Out There',
 			description: '',
-			medium: 'alcohol ink',
-			material: 'canvas',
+			medium: 'watercolor',
+			material: 'paper',
 			width: 5,
 			height: 7,
 			image: {
 				print: {
 					full: {
-						src: baseImgUri + 'v1548636136/Delicate%20Dust/Nature-Hug.jpg',
+						src:
+							baseImgUri +
+							'v1548636142/Delicate%20Dust/Out-There-_ORIGINAL-SCAN.jpg',
+						preloadSrc:
+							baseImgUri +
+							'v1549744966/Delicate%20Dust/Out-There-PRELOAD-SCAN.jpg',
 					},
 				},
 				photo: [
@@ -859,6 +939,9 @@ export default {
 						src:
 							baseImgUri +
 							'v1548636139/Delicate%20Dust/Night-Paths-_ORIGINAL-SCAN.jpg',
+						preloadSrc:
+							baseImgUri +
+							'v1549743273/Delicate%20Dust/Night-Paths-PRELOAD-SCAN.jpg',
 					},
 				},
 				photo: [
@@ -897,6 +980,9 @@ export default {
 				print: {
 					full: {
 						src: baseImgUri + 'v1548636136/Delicate%20Dust/Nature-Hug.jpg',
+						preloadSrc:
+							baseImgUri +
+							'v1549743273/Delicate%20Dust/Nature-Hug-PRELOAD-SCAN.jpg',
 					},
 				},
 				photo: [
@@ -935,6 +1021,9 @@ export default {
 				print: {
 					full: {
 						src: baseImgUri + 'v1548636136/Delicate%20Dust/Nature-Hug.jpg',
+						preloadSrc:
+							baseImgUri +
+							'v1549743273/Delicate%20Dust/Nature-Hug-PRELOAD-SCAN.jpg',
 					},
 				},
 				photo: [
@@ -975,6 +1064,9 @@ export default {
 						src:
 							baseImgUri +
 							'v1548636157/Delicate%20Dust/Warm-Wishes-ORIGINAL-SCAN.jpg',
+						preloadSrc:
+							baseImgUri +
+							'v1549736234/Delicate%20Dust/Warm-Wishes-PRELOAD-SCAN.jpg',
 					},
 				},
 				photo: [
@@ -1015,6 +1107,9 @@ export default {
 						src:
 							baseImgUri +
 							'v1548636139/Delicate%20Dust/Night-Paths-_ORIGINAL-SCAN.jpg',
+						preloadSrc:
+							baseImgUri +
+							'v1549743273/Delicate%20Dust/Night-Paths-PRELOAD-SCAN.jpg',
 					},
 				},
 				photo: [
@@ -1055,6 +1150,9 @@ export default {
 						src:
 							baseImgUri +
 							'v1548636157/Delicate%20Dust/Warm-Wishes-ORIGINAL-SCAN.jpg',
+						preloadSrc:
+							baseImgUri +
+							'v1549736234/Delicate%20Dust/Warm-Wishes-PRELOAD-SCAN.jpg',
 					},
 				},
 				photo: [
@@ -1093,6 +1191,9 @@ export default {
 				print: {
 					full: {
 						src: baseImgUri + 'v1548636136/Delicate%20Dust/Nature-Hug.jpg',
+						preloadSrc:
+							baseImgUri +
+							'v1549743273/Delicate%20Dust/Nature-Hug-PRELOAD-SCAN.jpg',
 					},
 				},
 				photo: [
@@ -1131,6 +1232,9 @@ export default {
 				print: {
 					full: {
 						src: baseImgUri + 'v1548636136/Delicate%20Dust/Nature-Hug.jpg',
+						preloadSrc:
+							baseImgUri +
+							'v1549743273/Delicate%20Dust/Nature-Hug-PRELOAD-SCAN.jpg',
 					},
 				},
 				photo: [

@@ -16,9 +16,9 @@ const Art = ({ art, isNavOpen, activeArtId, setActiveArt, router }) => {
 				let activeWidth;
 
 				if (isActive) {
-					rectWidth = isActive && rect && rect.width;
-					rectHeight = isActive && rect && rect.height;
-					activeHeight = document.documentElement.clientHeight * 0.8;
+					rectWidth = rect && rect.width;
+					rectHeight = rect && rect.height;
+					activeHeight = document.documentElement.clientHeight * 0.86;
 					activeWidth = (activeHeight / rectHeight) * rectWidth;
 				}
 

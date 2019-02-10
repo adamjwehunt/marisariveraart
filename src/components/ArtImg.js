@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
 import posed from 'react-pose';
+import PreloadImg from './PreloadImg';
 import content from '../services/content';
 
 const transition = {
 	duration: 300,
 	ease: [0.08, 0.69, 0.2, 0.99],
-};
-
-const imgWrapper = {
-	margin: 'auto',
 };
 
 const ImgWrapper = posed.div({
@@ -32,24 +29,6 @@ const ImgWrapper = posed.div({
 		applyAtStart: { zIndex: '2' },
 	},
 });
-
-const Img = ({ src, alt, isActive }) => (
-	<img
-		src={src}
-		alt={alt}
-		css={{
-			height: '100%',
-			width: isActive ? 'auto' : 'fit-content',
-			objectFit: isActive ? 'contain' : 'cover',
-			cursor: !isActive && 'zoom-in',
-			boxShadow: !isActive && '0px 0px 4px rgba(0,0,0,0.1)',
-			'&:hover': {
-				boxShadow: !isActive && '0px 3px 6px rgba(0,0,0,0.17)',
-			},
-			transition: 'box-shadow 0.3s ease-in-out',
-		}}
-	/>
-);
 
 class ArtImg extends Component {
 	componentDidMount() {
@@ -85,12 +64,31 @@ class ArtImg extends Component {
 				pose={pose}
 				activeWidth={activeWidth}
 				activeHeight={activeHeight}
-				css={imgWrapper}
+				css={{
+					margin: 'auto',
+					marginBottom: isActive && '11vh',
+					marginTop: isActive && '1vh',
+					maxWidth: isActive && '92vw',
+				}}
 			>
-				<Img
+				<PreloadImg
 					src={art.image.print.full.src}
+					preloadSrc={art.image.print.full.preloadSrc}
+					preloadSrc2={art.image.print.full.preloadSrc2}
+					preloadSrc3={art.image.print.full.preloadSrc3}
+					preloadSrc4={art.image.print.full.preloadSrc4}
 					alt={art.title}
-					isActive={isActive}
+					cssProps={{
+						height: '100%',
+						width: isActive ? 'auto' : 'fit-content',
+						objectFit: isActive ? 'contain' : 'cover',
+						cursor: !isActive && 'zoom-in',
+						boxShadow: !isActive && '0px 0px 4px rgba(0,0,0,0.1)',
+						'&:hover': {
+							boxShadow: !isActive && '0px 3px 6px rgba(0,0,0,0.17)',
+						},
+						transition: 'box-shadow 0.3s ease-in-out',
+					}}
 				/>
 			</ImgWrapper>
 		);
